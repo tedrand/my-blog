@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import layoutStyles from "../components/layout.module.css"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -23,9 +24,13 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
-      <ul>
-        <li style={{ display: `inline`, padding: `0 .5em` }}><Link to="/about">About</Link></li>
-        <li style={{ display: `inline`, padding: `0 .5em` }}><Link to="/about">Contact</Link></li>
+      <ul className={layoutStyles.navbar}>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
       </ul>
       <main>{children}</main>
       <footer>

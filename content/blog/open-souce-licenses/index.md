@@ -15,6 +15,9 @@ The tricky thing to understand about an open source license is that it is simult
 So, what does this all mean for the average developer? To be honest, the answer is almost entirely dependent on the situation. Sadly, like most legal questions, the answer is necessarily "it depends." And what does it depend on? Mostly money. The value of a particular use of software, and the ability of a company to extract damages, as well as the potential liability, can be a critical factor in analyzing the importance of a license. So in evaluating the issue, it is always a good idea to ask, "how much could someone gain or lose in a transaction to enforce rights under the license." 
 
 ## Copyright and Copyleft, Copy up and down and all around
+While patent rights can exist entirely separate from copyrights to a literary work that can be compiled on a computer, the copyright to a piece of software is often top of mind in the realm of open source licenses.
+
+### GNU General Public License (GPL)
 
 # Footnotes
 1. Ayala Goldstein, <i>Open Source Licenses Explained</i>, WhiteSource (Jan. 24, 2019) https://resources.whitesourcesoftware.com/blog-whitesource/open-source-licenses-explained

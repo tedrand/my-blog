@@ -1,0 +1,15 @@
+.navbar li {
+    display: inline; 
+    margin: 0 .5em;
+    text-decoration: none;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar li a:hover {
+    color: var(--color-primary-lighter);
+    text-decoration: underline;
+}

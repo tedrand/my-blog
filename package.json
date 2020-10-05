@@ -27,6 +27,7 @@
     "gatsby-plugin-offline": "^3.2.29",
     "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-plugin-sharp": "^2.6.37",
+    "gatsby-plugin-typography": "^2.5.12",
     "gatsby-remark-copy-linked-files": "^2.3.17",
     "gatsby-remark-images": "^3.3.31",
     "gatsby-remark-prismjs": "^3.5.14",
@@ -39,8 +40,11 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-typography": "^0.16.19",
     "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "typeface-montserrat": "0.0.75",
+    "typography": "^0.16.19",
+    "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "2.1.2"

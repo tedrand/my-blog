@@ -11,7 +11,7 @@
     --maxWidth-3xl: 48rem;
     --maxWidth-4xl: 56rem;
     --maxWidth-full: "100%";
-    --maxWidth-wrapper: var(--maxWidth-3xl);
+    --maxWidth-wrapper: var(--maxWidth-2xl);
     --spacing-px: "1px";
     --spacing-0: 0;
     --spacing-1: 0.25rem;
@@ -55,6 +55,8 @@
     --fontSize-6: 2.488rem;
     --fontSize-7: 2.986rem;
     --color-primary: #643380;
+    --color-primary-lighter: #8042a4;
+    --color-primary-darker: #48245c;
     --color-text: #2e353f;
     --color-text-light: #4f5969;
     --color-heading: #1a202c;
@@ -244,7 +246,7 @@
   .global-wrapper {
     margin: var(--spacing-0) auto;
     max-width: var(--maxWidth-wrapper);
-    padding: var(--spacing-5) var(--spacing-5);
+    padding: var(--spacing-12) var(--spacing-12);
     background-color: white;
   }
   
