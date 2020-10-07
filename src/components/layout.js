@@ -1,35 +1,72 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, Link, graphql } from "gatsby"
+import { css } from "@emotion/core"
+
+import { rhythm } from "../utils/typography"
 import layoutStyles from "../components/layout.module.css"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
-
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  )
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
+      <h1>
+        <Link to="/">{data.site.siteMetadata.title}</Link>
       </h1>
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
+      <h1
+        css={css`
+          color: var(--color-primary);
+        `}
+      >
+        <Link to="/">{data.site.siteMetadata.title}</Link>
+      </h1>
     )
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+    <div
+      data-is-root-path={isRootPath}
+      css={css`
+        margin: auto;
+        max-width: var(--maxWidth-wrapper);
+        padding: ${rhythm(0.5)} var(--spacing-12);
+        background-color: white;
+      `}
+    >
+      <header
+        css={css`
+          margin-bottom: ${rhythm(1.5)};
+        `}
+      >
+        {header}
+      </header>
       <ul className={layoutStyles.navbar}>
         <li>
           <Link to="/about">About</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link to="/contact">Privacy Policy</Link>
+        </li>
+        <li>
+          <Link to="/contact">Terms</Link>
         </li>
       </ul>
       <main>{children}</main>

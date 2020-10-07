@@ -1,16 +1,14 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const ContactPage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
+const ContactPage = ({ location }) => {
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <SEO title="About" />
       <div style={{ color: `teal` }}>
-        <h1>About Gatsby</h1>
+        <h1>Contact the Kraken</h1>
         <p>Such wow. Very React.</p>
       </div>
     </Layout>
@@ -18,13 +16,3 @@ const ContactPage = ({ data, location }) => {
 }
 
 export default ContactPage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

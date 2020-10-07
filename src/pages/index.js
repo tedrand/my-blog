@@ -1,17 +1,18 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { css } from "@emotion/core"
 
+import { rhythm } from "../utils/typography"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
-    const siteTitle = data.site.siteMetadata?.title || `Title`
     const posts = data.allMarkdownRemark.nodes
   
     if (posts.length === 0) {
       return (
-        <Layout location={location} title={siteTitle}>
+        <Layout location={location}>
           <SEO title="All posts" />
           <Bio />
           <p>
@@ -24,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
     }
   
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout location={location}>
         <SEO title="All posts" />
         <Bio />
         <ol style={{ listStyle: `none` }}>
@@ -34,12 +35,22 @@ const BlogIndex = ({ data, location }) => {
             return (
               <li key={post.fields.slug}>
                 <article
-                  className="post-list-item"
+                  css={css`
+                    margin-bottom: ${rhythm(1.5)};
+                    margin-top: ${rhythm(1.5)};
+                  `}
                   itemScope
                   itemType="http://schema.org/Article"
                 >
                   <header>
-                    <h2>
+                    <h2
+                      css={css`
+                        font-size: var(--fontSize-4);
+                        color: var(--color-primary);
+                        margin-bottom: var(--spacing-2);
+                        margin-top: var(--spacing-0);
+                      `}
+                    >
                       <Link to={post.fields.slug} itemProp="url">
                         <span itemProp="headline">{title}</span>
                       </Link>
@@ -67,11 +78,6 @@ const BlogIndex = ({ data, location }) => {
   
   export const pageQuery = graphql`
     query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         nodes {
           excerpt

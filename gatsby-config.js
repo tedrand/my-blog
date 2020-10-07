@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `TedRand.com`,
+    title: `Claim Kraken`,
     author: {
       name: `Ted Rand`,
       summary: `, an incoming Associate of Morgan Lewis's Silicon Valley office, and JavaScript hobbyist.`,
@@ -45,6 +45,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-plugin-emotion`,
         ],
       },
     },
