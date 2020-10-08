@@ -1,95 +1,81 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
+import Image from "gatsby-image"
 
-import { rhythm } from "../utils/typography"
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 
-const BlogIndex = ({ data, location }) => {
-    const posts = data.allMarkdownRemark.nodes
-  
-    if (posts.length === 0) {
-      return (
-        <Layout location={location}>
-          <SEO title="All posts" />
-          <Bio />
-          <p>
-            No blog posts found. Add markdown posts to "content/blog" (or the
-            directory you specified for the "gatsby-source-filesystem" plugin in
-            gatsby-config.js).
-          </p>
-        </Layout>
-      )
-    }
-  
-    return (
-      <Layout location={location}>
-        <SEO title="All posts" />
-        <Bio />
-        <ol style={{ listStyle: `none` }}>
-          {posts.map(post => {
-            const title = post.frontmatter.title || post.fields.slug
-  
-            return (
-              <li key={post.fields.slug}>
-                <article
-                  css={css`
-                    margin-bottom: ${rhythm(1.5)};
-                    margin-top: ${rhythm(1.5)};
-                  `}
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
-                  <header>
-                    <h2
-                      css={css`
-                        font-size: var(--fontSize-4);
-                        color: var(--color-primary);
-                        margin-bottom: var(--spacing-2);
-                        margin-top: var(--spacing-0);
-                      `}
-                    >
-                      <Link to={post.fields.slug} itemProp="url">
-                        <span itemProp="headline">{title}</span>
-                      </Link>
-                    </h2>
-                    <small>{post.frontmatter.date}</small>
-                  </header>
-                  <section>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: post.frontmatter.description || post.excerpt,
-                      }}
-                      itemProp="description"
-                    />
-                  </section>
-                </article>
-              </li>
-            )
-          })}
-        </ol>
-      </Layout>
-    )
-  }
-  
-  export default BlogIndex
-  
-  export const pageQuery = graphql`
-    query {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-        nodes {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
+const Index = ({ data, location }) => {
+  const avatar = data.avatar.childImageSharp.fixed
+  return (
+    <div
+      location={location}
+      css={css`
+        height: 100vh;
+        overflow-y: hidden;
+      `}
+    >
+      <Navbar />
+      <div
+        css={css`
+          min-height: 100vh;
+          max-width: 35em;
+          margin: auto;
+          padding-top: 20vh;
+          color: white;
+          text-align: center;
+          margin: 0 auto -96px; /* the bottom margin is the negative value of the footer's height */
+        `}
+      >
+        {avatar && (
+          <Image
+            fixed={avatar}
+            alt="TED RAND"
+            imgStyle={{
+              borderRadius: "50%",
+            }}
+            css={css`
+              min-width: 50px;
+              min-height: 50px;
+              margin: auto;
+              display: block;
+            `}
+          />
+        )}
+        <h1
+          style={{
+            color: "var(--color-lighter)",
+          }}
+        >
+          Patent Agent | Law Student
+        </h1>
+      </div>
+      <Footer />
+    </div>
+  )
+}
+
+export default Index
+
+export const pageQuery = graphql`
+  query {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 90, height: 90, quality: 95) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
-  `
+    site {
+      siteMetadata {
+        author {
+          name
+          summary
+        }
+        social {
+          twitter
+        }
+      }
+    }
+  }
+`

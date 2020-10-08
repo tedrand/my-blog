@@ -10,8 +10,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import Image from "gatsby-image"
 
-import { rhythm } from "../utils/typography"
-
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -46,6 +44,10 @@ const Bio = () => {
     <div 
       css={css`
         display: flex;
+        margin: auto;
+        width: 90%;
+        border: 1px solid var(--color-secondary);
+        padding: var(--spacing-4);
       `}
     >
       {avatar && (
@@ -56,7 +58,7 @@ const Bio = () => {
             borderRadius: '50%',
           }}
           css={css`
-            margin-right: ${rhythm(2)};
+            margin-right: var(--spacing-4)};
             min-width: 50px;
             min-height: 50px;
             display: inline-block;
@@ -67,7 +69,7 @@ const Bio = () => {
         <p
           css={css`
             display: inline-block;
-            max-width: 400px;
+            // max-width: 400px;
           `}
         >
           Written by <strong>{author.name}</strong> {author?.summary || null}
