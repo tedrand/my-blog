@@ -82,7 +82,12 @@ const BlogIndex = ({ data, location }) => {
     query {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: {frontmatter: {type: {eq: "blog"}}}
+        filter: {
+          frontmatter: {
+            type: {eq: "blog"}
+            published: {eq: true}
+          }
+        }
       ) {
         nodes {
           excerpt

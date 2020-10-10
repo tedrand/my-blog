@@ -3,6 +3,7 @@ title: Open Source Licenses - A Developer's Guide
 date: "2020-10-04T23:45:32.169Z"
 description: There are many kinds of open-source licenses, but what do they all really mean to the typical software developer. Today we look at several of the most popular licenses and how they affect the code that you right.
 type: "blog"
+published: false
 ---
 
 There are many kinds of open source licenses, but what do they all really mean to the typical software developer. Today we look at several of the most popular licenses and how they affect the code that you right.

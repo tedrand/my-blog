@@ -20,10 +20,10 @@ const Footer = () => {
         </Link>
       </div>
       <div style={{ float: "right", display: "inline-block" }}>
-        <Link className="nav-link" to="/privacy">
+        <Link className="nav-link" to="/privacy-policy">
           Privacy Policy
         </Link>
-        <Link className="nav-link" to="/terms">
+        <Link className="nav-link" to="/terms-of-use">
           Terms of Use
         </Link>
       </div>
