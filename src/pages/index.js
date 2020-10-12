@@ -1,7 +1,13 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import { css } from "@emotion/core"
 import Image from "gatsby-image"
+import IconButton from "@material-ui/core/IconButton"
+
+import GitHubIcon from "@material-ui/icons/GitHub"
+import MailIcon from "@material-ui/icons/Mail"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
 
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
@@ -57,6 +63,18 @@ const Index = ({ data, location }) => {
         >
           Patent Agent | Law Student
         </h1>
+        <IconButton className="icon-button" href="https://github.com/tedrand">
+          <GitHubIcon className="icon-color" />
+        </IconButton>
+        <IconButton
+          className="icon-button"
+          href="https://www.linkedin.com/in/tedrand/"
+        >
+          <LinkedInIcon className="icon-color" />
+        </IconButton>
+        <IconButton className="icon-button" component={Link} to="/contact">
+          <MailIcon className="icon-color" />
+        </IconButton>
       </div>
       <Footer />
     </div>

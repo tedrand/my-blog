@@ -248,6 +248,10 @@ a:focus {
 }
 
 /* Elements */
+.icon-color {
+  color: #eeeeeeaa;
+}
+
 .nav-link {
   display: inline-block;
   padding: var(--fontSize-0);

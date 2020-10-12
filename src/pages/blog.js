@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
     if (posts.length === 0) {
       return (
         <Layout location={location}>
-          <SEO title="All posts" />
+          <SEO title="Blog" />
           <Bio />
           <p>
             No blog posts found. Add markdown posts to "content/blog" (or the
