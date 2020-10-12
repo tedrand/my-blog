@@ -63,7 +63,10 @@ const Index = ({ data, location }) => {
         >
           Patent Agent | Law Student
         </h1>
-        <IconButton className="icon-button" href="https://github.com/tedrand">
+        <IconButton
+          className="icon-button"
+          href="https://github.com/tedrand"
+        >
           <GitHubIcon className="icon-color" />
         </IconButton>
         <IconButton
@@ -72,7 +75,11 @@ const Index = ({ data, location }) => {
         >
           <LinkedInIcon className="icon-color" />
         </IconButton>
-        <IconButton className="icon-button" component={Link} to="/contact">
+        <IconButton
+          className="icon-button"
+          component={Link}
+          to="/contact"
+        >
           <MailIcon className="icon-color" />
         </IconButton>
       </div>
