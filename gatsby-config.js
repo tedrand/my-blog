@@ -56,16 +56,17 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `TedRand.com`,
-        short_name: `GatsbyJS`,
+        short_name: `TRDC`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#348064`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
