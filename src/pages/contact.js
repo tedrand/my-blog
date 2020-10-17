@@ -11,7 +11,7 @@ const ContactPage = ({ location }) => {
         <h1>Contact Me!</h1>
         <form method="post" action="https://getform.io/f/707b02c1-a650-4909-aab0-8cdee25960ff">
           <div className="form-group">
-            <label>Email Address</label>
+            <label htmlfor="my-email">Email Address</label>
             <input type="email" className="form-control"
               placeholder="Enter your Email"
               id="my-email"
@@ -20,7 +20,7 @@ const ContactPage = ({ location }) => {
           </div>
 
           <div className="form-group">
-            <label>Name</label>
+            <label htmlfor="my-name">Name</label>
             <input type="text" className="form-control"
               placeholder="Enter your Name"
               id="my-name"
@@ -28,7 +28,7 @@ const ContactPage = ({ location }) => {
           </div>
 
           <div className="form-group">
-            <label for="exampleFormControlTextarea1">Message</label>
+            <label htmlfor="message">Message</label>
             <textarea className="form-control" id="exampleFormControlTextarea1"
               name="message"
               rows="5"></textarea>

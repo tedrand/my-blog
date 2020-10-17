@@ -1,7 +1,11 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
-import "bootstrap/js/src/collapse.js";
+
+// TODO: Fix this issue.
+// This solution is ideal but breaks in heroku deployment
+// instead full JS libraries are loaded in gatsby-browser.js
+// import "bootstrap/js/src/collapse.js";
 
 import Search from "../components/search"
 
