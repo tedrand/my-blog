@@ -9,6 +9,7 @@ const Footer = () => {
         -moz-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);
         -webkit-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);
         box-shadow: 3px -1px 3px 1px var(--color-secondary-lighter);
+        padding-top:20px;
       `}
     >
       <span className="navbar-text">

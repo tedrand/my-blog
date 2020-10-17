@@ -18,6 +18,7 @@ const Index = ({ data, location }) => {
         css={css`
           padding-top: 30px;
           padding-bottom: 30px;
+          min-height: 85vh;
         `}>
         <div className="jumbotron"
           css={css`

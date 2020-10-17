@@ -13,8 +13,8 @@ const Layout = ({ location, children }) => {
         background-color: var(--color-primary);
         background-image: linear-gradient(to top right, var(--color-primary), var(--color-secondary));
         background-repeat: no-repeat;
-        // box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
         min-height: 95vh;
+        // box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
       `}
     >
       <Topnav />
@@ -37,7 +37,7 @@ const Layout = ({ location, children }) => {
           This website uses cookies to enhance the user experience.{" "}
           Check out the <a href="/privacy-policy">Privacy Policy</a> for more details.
         </CookieConsent>
-      <Footer />
+      <Footer/>
     </div>
   )
 }
