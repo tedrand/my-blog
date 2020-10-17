@@ -78,11 +78,20 @@ const Bio = () => {
                 padding: 10px;
               `}
             >
-              <FaLinkedin href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}
-                target="_blank" rel="noreferrer" />
+              <a href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}
+                target="_blank" rel="noreferrer">
+                <FaLinkedin />
+              </a> 
+              <a href={`https://github.com/tedrand`}
+                target="_blank" rel="noreferrer">
+                <FaGithub />
+              </a> 
+              <a href={`https://github.com/tedrand`}
+                target="_blank" rel="noreferrer">
+                <FaEnvelope />
+              </a> 
               
-              <FaGithub href={`https://github.com/tedrand`}
-                target="_blank" rel="noreferrer" />
+              
             </div>
             
           </div>

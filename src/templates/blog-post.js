@@ -32,12 +32,15 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <nav className="blog-post-nav">
           <ul
             style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
+              
             }}
+            css={css`
+              display: flex;
+              flexWrap: wrap;
+              justifyContent: space-between;
+              listStyle: none;
+              padding: 0;
+            `}
           >
             <li>
               {previous && (

@@ -1,7 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 
 function formatLocalPath(path) {
   let splitPath = path.split("/")
