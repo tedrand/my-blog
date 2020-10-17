@@ -72,11 +72,10 @@ const Bio = () => {
         `}>
               {author?.summary || null}
             </div>
-            <div className="row icon-row"
+            <div className="row icon-row mt-auto"
               css={css`
                 font-size: 36px;
                 padding: 10px;
-                letter-spacing: 10px;
               `}
             >
               <FaLinkedin href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}

@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 const Footer = () => {
   return (
     <nav
-      className="navbar fixed-bottom navbar-expand-sm navbar-dark"
+      className="navbar navbar-expand-sm navbar-dark"
       css={css`
         -moz-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);
         -webkit-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);

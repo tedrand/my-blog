@@ -49,3 +49,7 @@
   padding: 50px;
   max-width: 800px;
 }
+
+.icon-row * {
+  margin-right: 0.5em;
+}
