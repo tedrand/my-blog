@@ -1,21 +1,15 @@
-/**
- * Bio component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import Image from "gatsby-image"
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50, quality: 95) {
+          fixed(width: 90, height: 90, quality: 95) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -39,51 +33,67 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   const avatar = data?.avatar?.childImageSharp?.fixed
-
+  console.log(avatar)
   return (
-    <div 
+    <div className="card"
       css={css`
-        display: flex;
         margin: auto;
-        width: 90%;
-        border: 1px solid var(--color-secondary);
-        padding: var(--spacing-4);
+        text-align: center;
+        border-radius: 0;
+        border: 4px solid var(--color-secondary-lighter);
+        min-height: 200px;
       `}
     >
-      {avatar && (
-        <Image
-          fixed={avatar}
-          alt={author?.name || ``}
-          imgStyle={{
-            borderRadius: '50%',
-          }}
-          css={css`
-            margin-right: var(--spacing-4)};
-            min-width: 50px;
-            min-height: 50px;
-            display: inline-block;
-          `}
-        />
-      )}
-      {author?.name && (
-        <p
-          css={css`
-            display: inline-block;
-            // max-width: 400px;
-          `}
-        >
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <u>
-            <a
-              href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}
-              target="_blank" rel="noreferrer"
+      <div className="card-body">
+        <div className="row">
+          <div className="col-sm-4">
+            <div className="card-title">{author.name}</div>
+            {avatar && (
+              <Image
+                fixed={avatar}
+                alt={author?.name || ``}
+                imgStyle={{
+                  borderRadius: '50%',
+                }}
+                css={css`
+                  display: block;
+                  margin: auto;
+                  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                  filter: grayscale(100%);
+                `}
+              />
+            )}
+          </div>
+          <div className="col">
+            <div className="card-text"
+              css={css`
+            text-align: left;
+            font-size: 12px;
+        `}>
+              {author?.summary || null}
+            </div>
+            <div className="row icon-row"
+              css={css`
+                font-size: 36px;
+                padding: 10px;
+                letter-spacing: 10px;
+              `}
             >
-              Check out my LinkedIn
-            </a>
-          </u>
-        </p>
-      )}
+              <FaLinkedin href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}
+                target="_blank" rel="noreferrer" />
+              
+              <FaGithub href={`https://github.com/tedrand`}
+                target="_blank" rel="noreferrer" />
+            </div>
+            
+          </div>
+        </div>
+
+
+      </div>
+
+
+
     </div>
   )
 }

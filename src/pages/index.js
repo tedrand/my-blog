@@ -1,90 +1,56 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Helmet } from "react-helmet"
+import { graphql } from "gatsby"
 import { css } from "@emotion/core"
-import Image from "gatsby-image"
-import IconButton from "@material-ui/core/IconButton"
 
-import GitHubIcon from "@material-ui/icons/GitHub"
-import MailIcon from "@material-ui/icons/Mail"
-import LinkedInIcon from "@material-ui/icons/LinkedIn"
-
-import Navbar from "../components/navbar"
-import Footer from "../components/footer"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Bio from "../components/bio"
 
 const Index = ({ data, location }) => {
   const avatar = data.avatar.childImageSharp.fixed
   const siteTitle = data.site.siteMetadata?.title || `Title`
   return (
-    <div
-      location={location}
-      title={siteTitle}
-      css={css`
-        height: 100vh;
-        overflow-y: hidden;
-      `}
-    >
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Ted Rand | Personal Portfolio</title>
-        <link rel="canonical" href="https://www.tedrand.com" />
-      </Helmet>
-      <Navbar />
-      <div
+    <Layout>
+      <SEO
+        title={siteTitle}
+        description={'Personal portfolio and legal blog.'} />
+      <div className="container"
         css={css`
-          min-height: 100vh;
-          max-width: 35em;
-          margin: auto;
-          padding-top: 20vh;
-          color: white;
-          text-align: center;
-          margin: 0 auto -96px; /* the bottom margin is the negative value of the footer's height */
-        `}
-      >
-        {avatar && (
-          <Image
-            fixed={avatar}
-            alt="TED RAND"
-            imgStyle={{
-              borderRadius: "50%",
-            }}
-            css={css`
-              min-width: 50px;
-              min-height: 50px;
-              margin: auto;
-              display: block;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        `}>
+        <div className="jumbotron"
+          css={css`
+            background-color: #ffffffaa;
+            padding: 10px;
+          `}
+        >
+          <h1 className="display-4">Welcome to my Website!</h1>
+          <p className="lead">Please check out my latest blog posts on patent law, and other IP issues.</p>
+          <p className="lead">
+            <a href="/Theodore_Rand_CV.pdf" className="btn btn-sm btn-primary">Download my CV</a>
+          </p>
+        </div>
+        <div className="row">
+          <div className="col-md-8">
+            <Bio avatar={avatar} />
+          </div>
+          <div className="col-sm-4">
+            <div className="container"
+              css={css`
+              padding: 20px;
+              background-color: #ffffffcc;
+              min-height: 200px;
             `}
-          />
-        )}
-        <h1
-          style={{
-            color: "var(--color-lighter)",
-          }}
-        >
-          Patent Agent | Law Student
-        </h1>
-        <IconButton
-          className="icon-button"
-          href="https://github.com/tedrand"
-        >
-          <GitHubIcon className="icon-color" />
-        </IconButton>
-        <IconButton
-          className="icon-button"
-          href="https://www.linkedin.com/in/tedrand/"
-        >
-          <LinkedInIcon className="icon-color" />
-        </IconButton>
-        <IconButton
-          className="icon-button"
-          component={Link}
-          to="/contact"
-        >
-          <MailIcon className="icon-color" />
-        </IconButton>
+            >
+              <p>Want Recent Federal Circuit Decisions?</p>
+              <a href="/tracker" className="btn btn-lg btn-primary">Go to Tracker</a>
+            </div>
+
+          </div>
+        </div>
       </div>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 

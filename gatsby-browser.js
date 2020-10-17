@@ -1,7 +1,7 @@
-// normalize CSS across browsers
-import "./src/normalize.css"
-// custom CSS styles
-import "./src/style.css"
+import 'bootstrap/dist/css/bootstrap.css'
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
+import './src/style.css'
 
-// Highlighting for code blocks
-import "prismjs/themes/prism.css"
+// import "../node_modules/jquery/dist/jquery.min.js";
+// import "../node_modules/bootstrap/dist/js/bootstrap.min.js";

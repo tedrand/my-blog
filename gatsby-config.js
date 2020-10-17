@@ -3,7 +3,7 @@ module.exports = {
     title: `Claim Kraken`,
     author: {
       name: `Ted Rand`,
-      summary: `, an incoming Associate of Morgan Lewis's Silicon Valley office, and JavaScript hobbyist.`,
+      summary: `An incoming Associate of Morgan Lewis's Silicon Valley office, and JavaScript hobbyist.`,
     },
     description: `A personal portfolio and patent law blog.`,
     siteUrl: `https://www.tedrand.com`,
@@ -61,11 +61,29 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#348064`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/icon.png`,
+      },
+    },
+    {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: [`title`, `description`, `html`, `path`],
+        // How to resolve each field`s value for a supported node type
+        resolvers: {
+          // For any node of type MarkdownRemark, list how to resolve the fields` values
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            description: node => node.frontmatter.description,
+            html: node => node.html,
+            path: node => node.fields.slug,
+          },
+        },
+        // Optional filter to limit indexed nodes
+        filter: (node, getNode) => node.frontmatter.tags !== "exempt",
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-material-ui`,
     `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

@@ -2,105 +2,91 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogIndex = ({ data, location }) => {
-    const posts = data.allMarkdownRemark.nodes
-  
-    if (posts.length === 0) {
-      return (
-        <Layout location={location}>
-          <SEO title="Blog" />
-          <Bio />
-          <p>
-            No blog posts found. Add markdown posts to "content/blog" (or the
-            directory you specified for the "gatsby-source-filesystem" plugin in
-            gatsby-config.js).
-          </p>
-        </Layout>
-      )
-    }
-  
-    return (
-      <Layout location={location}>
-        <SEO title="All posts" />
+  const posts = data.allMarkdownRemark.nodes
+
+  return (
+    <Layout location={location}>
+      <SEO title="All posts" />
+      <div className="container paper-container">
         <h1>Claim Kraken</h1>
         <h5>A Patent Law Blog</h5>
-        <Bio />
+        <hr />
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
-        <ol style={{ listStyle: `none` }}>
-          {posts.map(post => {
-            const title = post.frontmatter.title || post.fields.slug
-  
-            return (
-              <li key={post.fields.slug}>
-                <article
+        <div className="row">
+          <div className="col-md-8">
+            {posts.map(post => {
+              const title = post.frontmatter.title || post.fields.slug
+              return (
+                <div className="row"
                   css={css`
-                    margin-bottom: var(--spacing-4);
-                    margin-top: var(--spacing-6);
-                  `}
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
-                  <header>
-                    <h2
-                      css={css`
-                        font-size: var(--fontSize-4);
-                        color: var(--color-primary);
-                        margin-bottom: var(--spacing-2);
-                        margin-top: var(--spacing-0);
-                      `}
-                    >
+                  border: 2px solid var(--color-secondary-lighter);
+                  padding: 10px;
+                  margin-bottom: 10px;
+                  margin-right: 5px;
+                `}>
+                  <div className="col-md-4">
+                    <h3>
                       <Link to={post.fields.slug} itemProp="url">
                         <span itemProp="headline">{title}</span>
                       </Link>
-                    </h2>
+                    </h3>
                     <small>{post.frontmatter.date}</small>
-                  </header>
-                  <section>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: post.frontmatter.description || post.excerpt,
-                      }}
-                      itemProp="description"
-                    />
-                  </section>
-                </article>
-              </li>
-            )
-          })}
-        </ol>
-      </Layout>
-    )
-  }
-  
-  export default BlogIndex
-  
-  export const pageQuery = graphql`
-    query {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: {
-          frontmatter: {
-            type: {eq: "blog"}
-            published: {eq: true}
-          }
+                  </div>
+                  <div className="col-md-8">
+                    <section>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: post.frontmatter.description || post.excerpt,
+                        }}
+                        itemProp="description"
+                      />
+                    </section>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+          <div className="container col-md-4"
+            css={css`
+              padding: 20px;
+              background-color: lightgray;
+              min-height: 200px;
+            `}
+          >
+            <p>Want Recent Federal Circuit Decisions?</p>
+            <a className="btn btn-lg btn-primary" href="/tracker">Go to Tracker</a>
+          </div>
+        </div>
+
+      </div>
+    </Layout>
+  )
+}
+
+export default BlogIndex
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "blog" }, published: { eq: true } } }
+    ) {
+      nodes {
+        excerpt
+        fields {
+          slug
         }
-      ) {
-        nodes {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
         }
-        totalCount
       }
+      totalCount
     }
-  `
+  }
+`

@@ -1,33 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
 const Footer = () => {
   return (
-    <footer
+    <nav
+      className="navbar fixed-bottom navbar-expand-sm navbar-dark"
       css={css`
-        display: block;
-        width: 100%;
-        height: 48px;
-        background-color: var(--color-heading);
-        text-align: center;
-        border-top: 3px solid var(--color-primary-lighter);
+        -moz-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);
+        -webkit-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);
+        box-shadow: 3px -1px 3px 1px var(--color-secondary-lighter);
       `}
     >
-      <div style={{ float: "left", display: "inline-block" }}>
-        <Link className="nav-link" to="/privacy">
-          ©2020 Theodore A. Rand
-        </Link>
-      </div>
-      <div style={{ float: "right", display: "inline-block" }}>
-        <Link className="nav-link" to="/privacy-policy">
-          Privacy Policy
-        </Link>
-        <Link className="nav-link" to="/terms-of-use">
-          Terms of Use
-        </Link>
-      </div>
-    </footer>
+      <span className="navbar-text">
+        ©2020 Theodore A. Rand
+      </span>
+
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <a className="nav-link" href="/terms-of-use">Terms of Use</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="/privacy-policy">Privacy Policy</a>
+        </li>
+      </ul>
+    </nav>
   )
 }
 

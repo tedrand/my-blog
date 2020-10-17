@@ -1,4 +1,5 @@
 import React from "react"
+import { css } from "@emotion/core"
 
 import Layout from "../components/Layout"
 
@@ -61,22 +62,46 @@ class Tracker extends React.Component {
     } else if (!isLoaded) {
       return (
         <Layout location={"/tracker"}>
-          <div>Loading...</div>
+          <div className="container paper-container"
+            css={css`
+            min-height: 90vh;
+          `}>
+            <div>Loading...</div>
+          </div>
         </Layout>
       )
     } else {
       return (
         <Layout location={"/tracker"}>
-          <div>
+          <div className="container paper-container">
             <h1>CAFC Tracker</h1>
-            <ul>
-              {items.map(item => (
-                <li>
-                  <h2>{item.date_created}</h2>
-                  <h2>{item.name}</h2>
-                </li>
-              ))}
-            </ul>
+            <table className="table">
+              <thead>
+                <tr>
+                  <th scope="col">Case Name</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                {items.map(row => (
+                  <tr>
+                    <td>{row.name}</td>
+                    <td>{new Date(row.date_created).toDateString()}</td>
+                    <td>
+                    <form method="get" action={row.download_url}>
+                      <button
+                        className="btn btn-primary"
+                        href={row.download_url}
+                      >
+                        Download
+                      </button>
+                    </form>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </Layout>
       )

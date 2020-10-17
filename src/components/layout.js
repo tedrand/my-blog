@@ -1,49 +1,24 @@
 import React from "react"
 import { css } from "@emotion/core"
 
-import Navbar from "../components/navbar"
+import Topnav from "./topnav"
 import Footer from "../components/footer"
 
 const Layout = ({ location, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  let main
-  // const data = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       site {
-  //         siteMetadata {
-  //           title
-  //         }
-  //       }
-  //     }
-  //   `
-  // )
-  if (isRootPath) {
-    main = (
-      <main data-is-root-path={isRootPath}>
-        {children}
-      </main>
-    )
-  } else {
-    main = (
-      <main
-        css={css`
-          margin: auto;
-          max-width: var(--maxWidth-wrapper);
-          padding: var(--spacing-8) var(--spacing-12);
-          background-color: white;
-        `}
-      >
-        {children}
-      </main>
-    )
-  }
-
+  
   return (
-    <div data-is-root-path={isRootPath}>
-      <Navbar />
-      {main}
+    <div
+      css={css`
+        background-color: var(--color-primary);
+        background-image: linear-gradient(to top right, var(--color-primary), var(--color-secondary));
+        background-repeat: no-repeat;
+        // box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+        padding-bottom: 40px;
+        min-height: 95vh;
+      `}
+    >
+      <Topnav />
+        {children}
       <Footer />
     </div>
   )

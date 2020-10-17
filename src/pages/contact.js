@@ -1,12 +1,4 @@
 import React from "react"
-import { 
-  FormControl, 
-  InputLabel,
-  Input,
-  FormHelperText,
-  TextField,
-  Button 
-} from "@material-ui/core"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,41 +7,41 @@ const ContactPage = ({ location }) => {
   return (
     <Layout location={location}>
       <SEO title="Contact" />
-      <h1>Contact Me!</h1>
-      <form method="post" action="https://getform.io/f/707b02c1-a650-4909-aab0-8cdee25960ff">
-        <FormControl>
-          <InputLabel htmlfor="email">Email Address</InputLabel>
-          <Input id="my-email" aria-describedby="my-helper-text" />
-          <FormHelperText id="my-helper-text-email">We'll never share your email.</FormHelperText>
-        </FormControl>
-        <br />
-        <FormControl>
-          <InputLabel 
-            htmlfor="name"
-          >Name
-          </InputLabel>
-          <Input id="my-name" aria-describedby="my-helper-text" />
-          <FormHelperText id="my-helper-text-name">Please include your full name.</FormHelperText>
-        </FormControl>
-        <br />
-        <TextField
-          id="standard-multiline-flexible"
-          label="Message"
-          multiline
-          rows={4}
-          margin="normal"
-          variant="outlined"
-          name="message"
-          fullWidth
-          
-        />
-        <Button
-          variant="contained"
-          color="primary"
-          type="submit">
-            Send
-        </Button>
-      </form>
+      <div className="container paper-container">
+        <h1>Contact Me!</h1>
+        <form method="post" action="https://getform.io/f/707b02c1-a650-4909-aab0-8cdee25960ff">
+          <div className="form-group">
+            <label>Email Address</label>
+            <input type="email" className="form-control"
+              placeholder="Enter your Email"
+              id="my-email"
+            />
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div className="form-group">
+            <label>Name</label>
+            <input type="text" className="form-control"
+              placeholder="Enter your Name"
+              id="my-name"
+            />
+          </div>
+
+          <div className="form-group">
+            <label for="exampleFormControlTextarea1">Message</label>
+            <textarea className="form-control" id="exampleFormControlTextarea1"
+              name="message"
+              rows="5"></textarea>
+          </div>
+
+          <button className="btn btn-primary" variant="primary" type="submit">
+              Submit
+          </button>
+        </form>
+      </div>
+
+
+
     </Layout>
   )
 }
