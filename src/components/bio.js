@@ -75,6 +75,7 @@ const Bio = () => {
               css={css`
                 font-size: 36px;
                 padding: 10px;
+                margin: auto;
               `}
             >
               <a href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}
@@ -85,7 +86,7 @@ const Bio = () => {
                 target="_blank" rel="noreferrer">
                 <FaGithub />
               </a> 
-              <a href={`https://github.com/tedrand`}
+              <a href={`mailto: randtheodore@gmail.com`}
                 target="_blank" rel="noreferrer">
                 <FaEnvelope />
               </a> 

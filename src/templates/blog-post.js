@@ -15,6 +15,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      
       <article
         className="blog-post container paper-container"
         itemScope
@@ -31,9 +32,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <hr />
         <nav className="blog-post-nav">
           <ul
-            style={{
-              
-            }}
             css={css`
               display: flex;
               flexWrap: wrap;

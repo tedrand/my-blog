@@ -33,10 +33,13 @@ const Index = ({ data, location }) => {
           </p>
         </div>
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-md-6 container"
+            css={css`
+              margin-bottom: 10px;
+            `}>
             <Bio avatar={avatar} />
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-6">
             <div className="container"
               css={css`
               padding: 20px;

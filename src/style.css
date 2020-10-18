@@ -51,6 +51,15 @@
   min-height: 85vh;
 }
 
-.icon-row * {
+.icon-row a {
   margin-right: 0.5em;
+}
+
+.icon-row a * {
+  width: 30px;
+  color: var(--color-primary-lighter);
+}
+
+.icon-row a *:hover {
+  color: var(--color-primary);
 }

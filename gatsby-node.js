@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  const flashcardPost = path.resolve(`./src/templates/flashcard.js`);
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -21,6 +22,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             frontmatter {
               title
+              type
             }
           }
         }
@@ -44,18 +46,29 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1];
-      const next = index === 0 ? null : posts[index - 1];
+      if (post.frontmatter.type == "flashcard") {
+        createPage({
+          path: post.fields.slug,
+          component: flashcardPost,
+          context: {
+            slug: post.fields.slug,
+          },
+        });
+      } else {
+        const previous = index === posts.length - 1 ? null : posts[index + 1];
+        const next = index === 0 ? null : posts[index - 1];
 
-      createPage({
-        path: post.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.fields.slug,
-          previous,
-          next,
-        },
-      });
+        createPage({
+          path: post.fields.slug,
+          component: blogPost,
+          context: {
+            slug: post.fields.slug,
+            previous,
+            next,
+          },
+        });
+      }
+      
     });
   }
 };
