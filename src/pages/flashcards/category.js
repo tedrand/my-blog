@@ -2,18 +2,20 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+
+
+const CrimProFlashcards = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
-
+  console.log(location.pathname)
   return (
     <Layout location={location}>
       <SEO title="All posts" />
       <div className="container paper-container">
-        <h1>Claim Kraken</h1>
-        <h5>A Patent Law Blog</h5>
+        <h1>Law School Flashcards</h1>
+        <h3>Category - MPRE</h3>
         <hr />
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
         <div className="row">
@@ -21,14 +23,14 @@ const BlogIndex = ({ data, location }) => {
             {posts.map(post => {
               const title = post.frontmatter.title || post.fields.slug
               return (
-                <div className="row"
+                <div className="col"
                   css={css`
                   border: 2px solid var(--color-secondary-lighter);
                   padding: 10px;
                   margin-bottom: 10px;
                   margin-right: 5px;
                 `}>
-                  <div className="col-md-4">
+                  <div>
                     <h3>
                       <Link to={post.fields.slug} itemProp="url">
                         <span itemProp="headline">{title}</span>
@@ -36,7 +38,7 @@ const BlogIndex = ({ data, location }) => {
                     </h3>
                     <small>{post.frontmatter.date}</small>
                   </div>
-                  <div className="col-md-8">
+                  <div>
                     <section>
                       <p
                         dangerouslySetInnerHTML={{
@@ -67,13 +69,19 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default CrimProFlashcards
 
 export const pageQuery = graphql`
-  query {
+  query getFlashcardCategory($category: String) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { type: { eq: "flashcard" }, subtype: { eq: "question" } } }
+      filter: { 
+        frontmatter: { 
+          type: { eq: "flashcard" } 
+          subtype: { eq: "question" } 
+          category: { eq: $category }
+        } 
+      }
     ) {
       nodes {
         excerpt

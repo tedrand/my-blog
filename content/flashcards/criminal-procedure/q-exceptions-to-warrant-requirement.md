@@ -5,6 +5,8 @@ description: "Flashcard question about the warrant requirement."
 type: "flashcard"
 qString: "exceptions-to-warrant-requirement"
 subtype: "question"
+category: "criminal-procedure"
+subcategory: "warrant-requirement"
 ---
 
 **What are the common exceptions to the warrant requirement?**

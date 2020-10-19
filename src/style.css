@@ -63,3 +63,16 @@
 .icon-row a *:hover {
   color: var(--color-primary);
 }
+
+.flashcard .card-title {
+  color: var(--color-primary);
+}
+
+.flashcard .card-body {
+  color: var(--color-tertiary);
+}
+
+.home-card {
+  min-height: 200px;
+  margin-bottom: 10px;
+}

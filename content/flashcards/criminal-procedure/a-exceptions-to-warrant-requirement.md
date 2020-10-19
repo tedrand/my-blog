@@ -5,6 +5,8 @@ description: "Flashcard question about the warrant requirement."
 type: "flashcard"
 qString: "exceptions-to-warrant-requirement"
 subtype: "answer"
+category: "mpre"
+subcategory: "warrant-requirement"
 ---
 
 - Search incident to Arrest

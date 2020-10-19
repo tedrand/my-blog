@@ -1,12 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { css } from "@emotion/core"
+import { css } from "@emotion/core";
+import { useSpring, animated, config } from "react-spring";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 const FlashcardTemplate = ({ data, pageContext, location }) => {
     const post = data.markdownRemark;
+    const props = useSpring({marginTop: '0px', opacity: 1, from: {marginTop: '500px', opacity: 0}, duration: 2000, delay: 500, config: config.slow })
     console.log(post)
 
     return (
@@ -15,20 +17,22 @@ const FlashcardTemplate = ({ data, pageContext, location }) => {
                 title={post.frontmatter.title}
                 description={post.frontmatter.description || post.excerpt}
             />
-            <article
+            <article role="main"
                 className="blog-post container paper-container"
                 itemScope
                 itemType="http://schema.org/Article"
                 css={css`
-                    background-color: transparent;
-                `}
+                            background-color: transparent;
+                        `}
             >
-                <div className="card">
+
+
+                <animated.div className="card" style={props}>
                     <h3 className="card-title"
                         css={css`
-                            padding: 10px;
-                            border-bottom: 1px solid var(--color-secondary);
-                        `}>
+                                    padding: 10px;
+                                    border-bottom: 1px solid var(--color-secondary);
+                                `}>
                         {post.frontmatter.title}
                     </h3>
                     <div className="card-body">
@@ -42,11 +46,11 @@ const FlashcardTemplate = ({ data, pageContext, location }) => {
                         {post.frontmatter.subtype === "answer" && (
                             <a className="btn btn-warning" href={`/${post.frontmatter.category}/q-${post.frontmatter.qString}`}>Review Question</a>
                         )}
-                        
-                    </div>
-                </div>
-            </article>
 
+                    </div>
+                </animated.div>
+
+            </article>
         </Layout>
     );
 };

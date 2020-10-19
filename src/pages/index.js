@@ -33,22 +33,31 @@ const Index = ({ data, location }) => {
           </p>
         </div>
         <div className="row">
-          <div className="col-md-6 container"
+          <div className="col-md-6 container home-card"
             css={css`
               margin-bottom: 10px;
             `}>
             <Bio avatar={avatar} />
           </div>
-          <div className="col-sm-6">
-            <div className="container"
+          <div className="col-md-6">
+            <div className="card home-card"
               css={css`
               padding: 20px;
-              background-color: #ffffffcc;
+              background-color: #ffffff66;
+            `}
+            >
+              <p>Looking for law school flashcards?</p>
+              <a className="btn btn-lg btn-warning mt-auto" href="/flashcards">Go to Flashcards</a>
+            </div>
+            <div className="card home-card"
+              css={css`
+              padding: 20px;
+              background-color: #ffffff66;
               min-height: 200px;
             `}
             >
               <p>Want Recent Federal Circuit Decisions?</p>
-              <a href="/tracker" className="btn btn-lg btn-primary">Go to Tracker</a>
+              <a href="/tracker" className="btn btn-lg btn-primary mt-auto">Go to Tracker</a>
             </div>
 
           </div>

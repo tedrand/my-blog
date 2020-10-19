@@ -1,6 +1,20 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage } = actions
+  
+  if (page.path == "/flashcards/category/") {
+    for (cat of ["mpre", "criminal-procedure"]) {
+      createPage({
+        path: `/flashcards/${cat}/`,
+        component: require.resolve(`./src/pages/flashcards/category.js`),
+        context: { category: cat }
+      })
+    }
+  }
+}
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
@@ -123,3 +137,4 @@ exports.createSchemaCustomization = ({ actions }) => {
       }
     `);
 };
+
