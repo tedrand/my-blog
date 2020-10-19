@@ -1,5 +1,5 @@
 ---
-title: "Terry Stop ("Stop and Frisk") Elements"
+title: "Terry Stop (Stop and Frisk) Elements"
 date: "2020-10-19T00:08:37.121Z"
 description: "Flashcard question about the Warrantless Arrests."
 type: "flashcard"
