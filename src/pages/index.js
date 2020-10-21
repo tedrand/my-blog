@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
+import { useSpring, animated, config } from "react-spring";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,6 +10,8 @@ import Bio from "../components/bio"
 const Index = ({ data, location }) => {
   const avatar = data.avatar.childImageSharp.fixed
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const cardProps = useSpring({ marginLeft: '0px', opacity: 1, from: { marginLeft: '-50vw', opacity: 0 }, duration: 2000, delay: 500, config: config.tense })
+  const sidebarProps = useSpring({ opacity: 1, from: { opacity: 0 }, duration: 40000, config: config.slow })
   return (
     <Layout>
       <SEO
@@ -33,22 +36,25 @@ const Index = ({ data, location }) => {
           </p>
         </div>
         <div className="row">
-          <div className="col-md-6 container home-card"
+          <animated.div className="col-md-6 container home-card"
+            style={cardProps}
             css={css`
               margin-bottom: 10px;
             `}>
             <Bio avatar={avatar} />
-          </div>
-          <div className="col-md-6">
-            <div className="card home-card"
+          </animated.div>
+          <div className="col-md-6"
+            style={sidebarProps}>
+            <animated.div className="card home-card"
               css={css`
               padding: 20px;
               background-color: #ffffff66;
             `}
+            style={sidebarProps}
             >
               <p>Looking for law school flashcards?</p>
               <a className="btn btn-lg btn-warning mt-auto" href="/flashcards">Go to Flashcards</a>
-            </div>
+            </animated.div>
             <div className="card home-card"
               css={css`
               padding: 20px;

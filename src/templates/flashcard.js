@@ -9,7 +9,6 @@ import SEO from "../components/seo";
 const FlashcardTemplate = ({ data, pageContext, location }) => {
     const post = data.markdownRemark;
     const props = useSpring({marginTop: '0px', opacity: 1, from: {marginTop: '500px', opacity: 0}, duration: 2000, delay: 500, config: config.slow })
-    console.log(post)
 
     return (
         <Layout location={location}>
