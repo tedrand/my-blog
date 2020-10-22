@@ -76,3 +76,7 @@
   min-height: 200px;
   margin-bottom: 10px;
 }
+
+.footer-nav .nav-link {
+  line-height: 30px;
+}

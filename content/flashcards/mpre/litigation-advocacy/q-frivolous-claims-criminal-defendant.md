@@ -6,7 +6,7 @@ type: "flashcard"
 qString: "frivolous-claims-criminal-defendant"
 subtype: "question"
 category: "mpre"
-subcategory: "litigation-conduct"
+subcategory: "litigation-advocacy"
 ---
 
 **What is the standard applied to the prohibition of frivolous claims as to a criminal defendant?**

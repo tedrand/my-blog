@@ -9,14 +9,12 @@ const FlashcardIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const postCats = {}
   for (let post of posts) {
-    console.log(post)
     if (postCats[post.frontmatter.category]) {
       postCats[post.frontmatter.category] += 1
     } else {
       postCats[post.frontmatter.category] = 1
     }
   }
-  console.log(postCats)
 
   const catMap = {
     "mpre": "Multi-State Professional Responsibility Examination",
@@ -33,7 +31,7 @@ const FlashcardIndex = ({ data, location }) => {
         <div className="row">
           <div className="col-md-8">
             {Object.keys(postCats).map((key, index) => {
-              console.log(key)
+
               return (
                 <a className="card flashcard"
                   href={`/flashcards/${key}`}

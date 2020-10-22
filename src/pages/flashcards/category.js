@@ -9,7 +9,7 @@ import SEO from "../../components/seo"
 
 const CrimProFlashcards = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
-  console.log(location.pathname)
+
   return (
     <Layout location={location}>
       <SEO title="All posts" />

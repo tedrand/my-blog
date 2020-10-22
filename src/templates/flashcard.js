@@ -8,8 +8,9 @@ import SEO from "../components/seo";
 
 const FlashcardTemplate = ({ data, pageContext, location }) => {
     const post = data.markdownRemark;
-    const props = useSpring({marginTop: '0px', opacity: 1, from: {marginTop: '500px', opacity: 0}, duration: 2000, delay: 500, config: config.slow })
-
+    const props = useSpring({ marginTop: '0px', opacity: 1, from: { marginTop: '500px', opacity: 0 }, duration: 2000, delay: 500, config: config.slow })
+    const linkStr = `/${post.frontmatter.category}/${post.frontmatter.subcategory ?
+        post.frontmatter.subcategory : ''}/`
     return (
         <Layout location={location}>
             <SEO
@@ -40,10 +41,10 @@ const FlashcardTemplate = ({ data, pageContext, location }) => {
                             itemProp="articleBody"
                         />
                         {post.frontmatter.subtype === "question" && (
-                            <a className="btn btn-primary" href={`/${post.frontmatter.category}/a-${post.frontmatter.qString}`}>See Answer</a>
+                            <a className="btn btn-primary" href={`${linkStr}a-${post.frontmatter.qString}`}>See Answer</a>
                         )}
                         {post.frontmatter.subtype === "answer" && (
-                            <a className="btn btn-warning" href={`/${post.frontmatter.category}/q-${post.frontmatter.qString}`}>Review Question</a>
+                            <a className="btn btn-warning" href={`${linkStr}q-${post.frontmatter.qString}`}>Review Question</a>
                         )}
 
                     </div>
@@ -67,6 +68,7 @@ export const pageQuery = graphql`
                 date(formatString: "MMMM DD, YYYY")
                 subtype
                 category
+                subcategory
                 qString
             }
         }
