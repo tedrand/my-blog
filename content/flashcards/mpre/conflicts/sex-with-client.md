@@ -3,10 +3,7 @@ title: "Conflicts - Sexual Relations with Client"
 date: "2020-10-21T18:05:37.121Z"
 description: "Flashcard question about conflicts of interest."
 type: "flashcard"
-qString: "sex-with-client"
-subtype: "answer"
-category: "mpre"
-subcategory: "conflicts"
+question: "What are the Rules about engaging in sexual relations with a client?"
 ---
 
 A lawyer is prohibited from engaging in sexual relations with a client, unless a consensual relationship existed between the lawyer and client when the client-lawyer relationship commenced. MRPC 1.8(j).

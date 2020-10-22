@@ -6,13 +6,13 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
 const FlashcardIndex = ({ data, location }) => {
-  const posts = data.allMarkdownRemark.nodes
+  console.log(data)
   const postCats = {}
-  for (let post of posts) {
-    if (postCats[post.frontmatter.category]) {
-      postCats[post.frontmatter.category] += 1
+  for (let node of data.allMarkdownRemark.nodes) {
+    if (postCats[node.fields.slug.split("/")[1]]) {
+      postCats[node.fields.slug.split("/")[1]] += 1
     } else {
-      postCats[post.frontmatter.category] = 1
+      postCats[node.fields.slug.split("/")[1]] = 1
     }
   }
 
@@ -23,7 +23,7 @@ const FlashcardIndex = ({ data, location }) => {
 
   return (
     <Layout location={location}>
-      <SEO title="All posts" />
+      <SEO title="Law School Flashcards" />
       <div className="container paper-container">
         <h1>Law School Flashcards</h1>
         <hr />
@@ -31,7 +31,6 @@ const FlashcardIndex = ({ data, location }) => {
         <div className="row">
           <div className="col-md-8">
             {Object.keys(postCats).map((key, index) => {
-
               return (
                 <a className="card flashcard"
                   href={`/flashcards/${key}`}
@@ -62,7 +61,6 @@ const FlashcardIndex = ({ data, location }) => {
               <p>Want Recent Federal Circuit Decisions?</p>
               <a className="btn btn-lg btn-primary" href="/tracker">Go to Tracker</a>
             </div>
-
             <div className="card"
               css={css`
               padding: 20px;
@@ -73,11 +71,8 @@ const FlashcardIndex = ({ data, location }) => {
               <p>Looking for law school flashcards?</p>
               <a className="btn btn-lg btn-primary" href="/flashcards">Go to Flashcards</a>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </Layout>
   )
@@ -92,7 +87,6 @@ export const pageQuery = graphql`
       filter: { 
         frontmatter: { 
           type: { eq: "flashcard" } 
-          subtype: { eq: "question" } 
         } 
       }
     ) {
@@ -105,7 +99,6 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
-          category
         }
       }
       totalCount

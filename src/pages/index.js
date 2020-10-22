@@ -11,7 +11,8 @@ const Index = ({ data, location }) => {
   const avatar = data.avatar.childImageSharp.fixed
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const cardProps = useSpring({ marginLeft: '0px', opacity: 1, from: { marginLeft: '-50vw', opacity: 0 }, duration: 2000, delay: 500, config: config.tense })
-  const sidebarProps = useSpring({ opacity: 1, from: { opacity: 0 }, duration: 40000, config: config.slow })
+  const card2Props = useSpring({ marginTop: '0px', opacity: 1, from: { marginTop: '30vh', opacity: 0 }, duration: 2000, delay: 1500, config: config.slow })
+  const sidebarProps = useSpring({ opacity: 1, from: { opacity: 0 }, config: config.slow })
   return (
     <Layout>
       <SEO
@@ -36,35 +37,55 @@ const Index = ({ data, location }) => {
           </p>
         </div>
         <div className="row">
-          <animated.div className="col-md-6 container home-card"
-            style={cardProps}
-            css={css`
-              margin-bottom: 10px;
-            `}>
-            <Bio avatar={avatar} />
-          </animated.div>
-          <div className="col-md-6"
-            style={sidebarProps}>
+          <div className="col-md-6">
+            <animated.div
+              style={cardProps}
+              className="container"
+              css={css`margin-bottom: 10px;`}>
+              <Bio avatar={avatar} />
+            </animated.div>
+            <div className="container">
+              <animated.div className="home-card card"
+                style={card2Props}
+                css={css`
+                margin: auto;
+                text-align: center;
+                border-radius: 0;
+                border: 4px solid var(--color-secondary-lighter);
+                min-height: 200px;
+              `}
+              >
+                <h4 className="card-title">Legal Disclaimer</h4>
+                <span className="card-body">
+                  <small>The information provided on this website does not, and is not intended to, 
+                  constitute legal advice; instead, all information, content, and materials 
+                  available on this site are for general informational purposes only.</small>
+                </span>
+              </animated.div>
+            </div>
+          </div>
+          <div className="col-md-6">
             <animated.div className="card home-card"
               css={css`
-              padding: 20px;
-              background-color: #ffffff66;
-            `}
-            style={sidebarProps}
+                padding: 20px;
+                background-color: #ffffff66;
+              `}
+              style={sidebarProps}
             >
               <p>Looking for law school flashcards?</p>
               <a className="btn btn-lg btn-warning mt-auto" href="/flashcards">Go to Flashcards</a>
             </animated.div>
-            <div className="card home-card"
+            <animated.div className="card home-card"
               css={css`
-              padding: 20px;
-              background-color: #ffffff66;
-              min-height: 200px;
-            `}
+                padding: 20px;
+                background-color: #ffffff66;
+                min-height: 200px;
+              `}
+              style={sidebarProps}
             >
               <p>Want Recent Federal Circuit Decisions?</p>
               <a href="/tracker" className="btn btn-lg btn-primary mt-auto">Go to Tracker</a>
-            </div>
+            </animated.div>
 
           </div>
         </div>

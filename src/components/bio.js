@@ -34,7 +34,7 @@ const Bio = () => {
   const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <div className="card"
+    <div className="card home-card container"
       css={css`
         margin: auto;
         text-align: center;
@@ -66,9 +66,9 @@ const Bio = () => {
           <div className="col">
             <div className="card-text"
               css={css`
-            text-align: left;
-            font-size: 12px;
-        `}>
+                  text-align: left;
+                  font-size: 12px;
+              `}>
               {author?.summary || null}
             </div>
             <div className="row icon-row mt-auto"
@@ -90,14 +90,9 @@ const Bio = () => {
                 target="_blank" rel="noreferrer">
                 <FaEnvelope />
               </a> 
-              
-              
             </div>
-            
           </div>
         </div>
-
-
       </div>
 
 

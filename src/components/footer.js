@@ -27,11 +27,8 @@ const Footer = () => {
         padding-top:20px;
       `}
     >
-      <a class="navbar-brand">
-        <Image
-          fixed={footerImg}
-        />
-        
+      <a className="navbar-brand" href="/">
+        <Image fixed={footerImg} />
       </a>
       <span className="navbar-text">
       ©2020 Theodore A. Rand

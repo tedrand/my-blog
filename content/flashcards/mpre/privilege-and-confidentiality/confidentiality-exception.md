@@ -3,10 +3,7 @@ title: "Confidentiality Exceptions"
 date: "2020-10-21T16:41:37.121Z"
 description: "Flashcard question about the exceptions to the rules of Confidentiality."
 type: "flashcard"
-qString: "confidentiality-exception"
-subtype: "answer"
-category: "mpre"
-subcategory: "privilege-and-confidentiality"
+question: "What are the exceptions to the rule of client confidentiality?"
 ---
 
 - **Reasonably Certain Death or Bodily Harm.**

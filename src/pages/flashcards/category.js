@@ -8,14 +8,16 @@ import SEO from "../../components/seo"
 
 
 const CrimProFlashcards = ({ data, location }) => {
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allMarkdownRemark.nodes.filter(function (node) {
+    return node.fields.slug.indexOf(location.pathname.split("/")[2]) !== -1
+  })
 
   return (
     <Layout location={location}>
-      <SEO title="All posts" />
+      <SEO title="Lawschool Flashcards" />
       <div className="container paper-container">
         <h1>Law School Flashcards</h1>
-        <h3>Category - MPRE</h3>
+        <h3>Category: {location.pathname.split("/")[2]}</h3>
         <hr />
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
         <div className="row">
@@ -23,7 +25,7 @@ const CrimProFlashcards = ({ data, location }) => {
             {posts.map(post => {
               const title = post.frontmatter.title || post.fields.slug
               return (
-                <div className="col"
+                <div className="col" key={post.fields.slug}
                   css={css`
                   border: 2px solid var(--color-secondary-lighter);
                   padding: 10px;
@@ -72,17 +74,8 @@ const CrimProFlashcards = ({ data, location }) => {
 export default CrimProFlashcards
 
 export const pageQuery = graphql`
-  query getFlashcardCategory($category: String) {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { 
-        frontmatter: { 
-          type: { eq: "flashcard" } 
-          subtype: { eq: "question" } 
-          category: { eq: $category }
-        } 
-      }
-    ) {
+  query getFlashcardCategory {
+    allMarkdownRemark {
       nodes {
         excerpt
         fields {

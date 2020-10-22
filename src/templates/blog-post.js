@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { css } from "@emotion/core"
 
 import Layout from "../components/layout";
@@ -28,6 +28,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
+          className="article"
         />
         <hr />
         <nav className="blog-post-nav">
@@ -40,18 +41,18 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               padding: 0;
             `}
           >
-            <li>
+            <li className="nav-link">
               {previous && (
-                <Link to={previous.fields.slug} rel="prev">
+                <a className="btn btn-primary" href={previous.fields.slug} rel="prev">
                   ← {previous.frontmatter.title}
-                </Link>
+                </a>
               )}
             </li>
-            <li>
+            <li className="nav-link">
               {next && (
-                <Link to={next.fields.slug} rel="next">
+                <a className="btn btn-primary" href={next.fields.slug} rel="next">
                   {next.frontmatter.title} →
-                </Link>
+                </a>
               )}
             </li>
           </ul>

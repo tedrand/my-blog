@@ -9,7 +9,7 @@ exports.onCreatePage = async ({ page, actions }) => {
       createPage({
         path: `/flashcards/${cat}/`,
         component: require.resolve(`./src/pages/flashcards/category.js`),
-        context: { category: cat }
+        // context: { category: `/flashcards/${cat}/` }
       })
     }
   }
@@ -60,18 +60,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (posts.length > 0) {
     posts.forEach((post, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1];
+      const next = index === 0 ? null : posts[index - 1];
+        
       if (post.frontmatter.type == "flashcard") {
         createPage({
           path: post.fields.slug,
           component: flashcardPost,
           context: {
             slug: post.fields.slug,
+            previous,
+            next,
           },
         });
       } else {
-        const previous = index === posts.length - 1 ? null : posts[index + 1];
-        const next = index === 0 ? null : posts[index - 1];
-
         createPage({
           path: post.fields.slug,
           component: blogPost,

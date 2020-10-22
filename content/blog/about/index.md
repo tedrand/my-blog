@@ -5,6 +5,8 @@ description: "About Me"
 type: "static"
 ---
 
+![About Me Picture](https://res.cloudinary.com/hznf6ch9w/image/upload/c_scale,w_520/v1603386892/83148818_10220657718027209_4421086271069688911_n_s3eqmt.jpg)
+
 Thanks for stopping by to check out my website. I'm a law student at UNH Franklin Pierce School of Law in Concord, New Hampshire. I am currently studying to practice patent law. I made this site because I love writing code and because I wanted to have a place to articulate the way I study the law.
 
 After a brief stint at a small start-up making graphics software for sports broadcasting, I went to an AdTech company called Sovrn in Boulder, Colorado. Sovrn was an amazing company, and I worked closely with a cool group of people. I made my first meaningful contribution to an open-source library and learned how to release production code. But even more importantly, I developed some great working relationships with peers and mentors that have been invaluable to my personal growth.
