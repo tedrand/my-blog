@@ -15,4 +15,4 @@ ii) Written notice is promptly given to any affected former client so that the c
 iii) Certifications of compliance with the Model Rules and with the screening procedures are provided to the former client by the screened lawyer and by a partner at the firm at reasonable intervals, upon written request by the former client, and if the screening procedures are terminated. MRPC 1.10(a)(2).
 
 - **Contents of the notice** must be compliant with MRPC 1.10(a)(2)(ii).
-- **Fee Restriction.** The disqualified lawyer may not receive compensation that is directly related to the matter from which the lawyer is disqualified. MRPC 1.10. cmt. 8.
+- **Fee Restriction.** The disqualified lawyer <b>may not receive compensation</b> that is directly related to the matter from which the lawyer is disqualified. MRPC 1.10. cmt. 8.

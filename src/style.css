@@ -88,7 +88,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 250px;
+  min-height: 350px;
 }
 
 .flashcard {
@@ -122,4 +122,8 @@
   display: block;
   margin: 20px auto;
   text-align: center;
+}
+
+._f-indent {
+  padding-left: 30px;
 }

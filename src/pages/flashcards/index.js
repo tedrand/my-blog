@@ -6,7 +6,6 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
 const FlashcardIndex = ({ data, location }) => {
-  console.log(data)
   const postCats = {}
   for (let node of data.allMarkdownRemark.nodes) {
     if (postCats[node.fields.slug.split("/")[1]]) {
@@ -59,7 +58,7 @@ export default FlashcardIndex
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [fields___slug, frontmatter___date], order: DESC }
       filter: { 
         frontmatter: { 
           type: { eq: "flashcard" } 
