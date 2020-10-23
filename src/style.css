@@ -56,7 +56,7 @@
 }
 
 .icon-row a * {
-  width: 30px;
+  width: 25px;
   color: var(--color-primary-lighter);
 }
 
@@ -64,22 +64,15 @@
   color: var(--color-primary);
 }
 
-.flashcard .card-title {
-  color: var(--color-primary);
-}
-
-.flashcard .card-body {
-  color: var(--color-tertiary);
-}
-
 .home-card {
   min-height: 200px;
   margin-bottom: 10px;
+  padding: 2px;
 }
 
 .home-card .card-title {
   margin-top: 5px;
-}
+} 
 
 .footer-nav .nav-link {
   line-height: 30px;
@@ -88,4 +81,45 @@
 .article img {
   display: block;
   margin: auto;
+}
+
+.flashcard-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 250px;
+}
+
+.flashcard {
+  min-height: 250px;
+  min-width: 90%;
+  max-width: 95%;
+  position: absolute;
+}
+
+.flashcard .card-title {
+  padding: 5px;
+  border-bottom: 1px solid var(--color-secondary-lighter);
+}
+
+.flashcard .card-title {
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.flashcard .card-body {
+  font-size: 12px;
+}
+
+.flashcard-container {
+  margin-bottom: 50px;
+  max-width: 680px;
+  min-height: 90vh;
+}
+
+.flashcard-container .btn-toolbar {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
 }

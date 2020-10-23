@@ -28,11 +28,10 @@ const FlashcardIndex = ({ data, location }) => {
         <h1>Law School Flashcards</h1>
         <hr />
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
-        <div className="row">
-          <div className="col-md-8">
+          <div className="col">
             {Object.keys(postCats).map((key, index) => {
               return (
-                <a className="card flashcard"
+                <a className="card"
                   href={`/flashcards/${key}`}
                   css={css`
                   border: 2px solid var(--color-secondary-lighter);
@@ -50,29 +49,6 @@ const FlashcardIndex = ({ data, location }) => {
               )
             })}
           </div>
-          <div className="col-md-4">
-            <div className="card"
-              css={css`
-              padding: 20px;
-              background-color: lightgray;
-              min-height: 200px;
-            `}
-            >
-              <p>Want Recent Federal Circuit Decisions?</p>
-              <a className="btn btn-lg btn-primary" href="/tracker">Go to Tracker</a>
-            </div>
-            <div className="card"
-              css={css`
-              padding: 20px;
-              background-color: #ffffff99;
-              min-height: 200px;
-            `}
-            >
-              <p>Looking for law school flashcards?</p>
-              <a className="btn btn-lg btn-primary" href="/flashcards">Go to Flashcards</a>
-            </div>
-          </div>
-        </div>
       </div>
     </Layout>
   )

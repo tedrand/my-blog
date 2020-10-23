@@ -1,39 +1,22 @@
 import React from "react"
-import { css } from "@emotion/core"
 
 export default (previous, next, category) => {
     return (
-        <nav className="blog-post-nav">
-            <ul
-                css={css`
-                    display: flex;
-                    flexWrap: wrap;
-                    justifyContent: space-between;
-                    listStyle: none;
-                    padding: 0;
-                `}
-            >
-                <li className="nav-link">
-                    {previous && (
-                        <a className="btn btn-primary" href={previous.fields.slug} rel="prev">
-                            ← {previous.frontmatter.title}
-                        </a>
-                    )}
-                </li>
-                <li className="nav-link">
-                    <a className="btn btn-secondary"
-                        href={`/flashcards/${category}`}>
-                        Back to Category
-                    </a>
-                </li>
-                <li className="nav-link">
-                    {next && (
-                        <a className="btn btn-primary" href={next.fields.slug} rel="next">
-                            {next.frontmatter.title} →
-                        </a>
-                    )}
-                </li>
-            </ul>
-        </nav>
+        <div className="btn-toolbar" role="toolbar">
+            {previous && (
+                <a className="btn btn-sm btn-primary mr-2" href={previous.fields.slug} rel="prev">
+                    ← Previous Card
+                </a>
+            )}
+            <a className="btn btn-sm btn-warning"
+                href={`/flashcards/${category}`}>
+                Category
+            </a>
+            {next && (
+                <a className="btn btn-sm btn-primary ml-2" href={next.fields.slug} rel="next">
+                    Next Card →
+                </a>
+            )}
+        </div>
     )
 }

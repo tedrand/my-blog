@@ -53,6 +53,7 @@ const Index = ({ data, location }) => {
                 border-radius: 0;
                 border: 4px solid var(--color-secondary-lighter);
                 min-height: 200px;
+                margin-bottom: 10px;
               `}
               >
                 <h4 className="card-title">Legal Disclaimer</h4>

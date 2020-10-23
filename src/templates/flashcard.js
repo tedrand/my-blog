@@ -22,16 +22,13 @@ const FlashcardTemplate = ({ data, pageContext, location }) => {
                 title={post.frontmatter.title}
                 description={post.frontmatter.description || post.excerpt}
             />
-            <article role="main" 
-                className="blog-post container paper-container"
-                style={{ backgroundColor: "transparent" }}
-            >
+            <div className="container flashcard-container">
                 {flashcardNav(previous, next, post.fields.slug.split("/")[1])}
                 <animated.div style={props}>
                     <Flashcard front={post.frontmatter.question}
                         back={post.html} title={post.frontmatter.title} />
                 </animated.div>
-            </article>
+            </div>
         </Layout>
     );
 };
