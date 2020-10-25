@@ -34,69 +34,43 @@ const Bio = () => {
   const avatar = data?.avatar?.childImageSharp?.fixed
 
   return (
-    <div className="card home-card container"
-      css={css`
-        margin: auto;
-        text-align: center;
-        border-radius: 0;
-        border: 4px solid var(--color-secondary-lighter);
-        min-height: 200px;
-      `}
-    >
+    <div className="card home-card">
       <div className="card-body">
         <div className="row">
-          <div className="col-sm-4">
-            <div className="card-title">{author.name}</div>
+          <div className="col-sm-4"
+            css={css`text-align: center;`}>
+            <div className="card-title">
+              <h4>{author.name}</h4>
+            </div>
             {avatar && (
               <Image
                 fixed={avatar}
                 alt={author?.name || ``}
-                imgStyle={{
-                  borderRadius: '50%',
-                }}
-                css={css`
-                  display: block;
-                  margin: auto;
-                  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-                  filter: grayscale(100%);
-                `}
+                imgStyle={{ borderRadius: '30%' }}
               />
             )}
           </div>
-          <div className="col">
-            <div className="card-text"
-              css={css`
-                  text-align: left;
-                  font-size: 12px;
-              `}>
-              {author?.summary || null}
+          <div className="col-sm-6">
+            <div className="card-text">
+              <small>{author?.summary || null}</small>
             </div>
-            <div className="row icon-row mt-auto"
-              css={css`
-                font-size: 36px;
-                padding: 10px;
-                margin: auto;
-              `}
-            >
-              <a href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}
-                target="_blank" rel="noreferrer">
-                <FaLinkedin />
-              </a> 
-              <a href={`https://github.com/tedrand`}
-                target="_blank" rel="noreferrer">
-                <FaGithub />
-              </a> 
+            <div className="row icon-row mt-auto">
               <a href={`mailto: randtheodore@gmail.com`}
                 target="_blank" rel="noreferrer">
                 <FaEnvelope />
-              </a> 
+              </a>
+              <a href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}
+                target="_blank" rel="noreferrer">
+                <FaLinkedin />
+              </a>
+              <a href={`https://github.com/tedrand`}
+                target="_blank" rel="noreferrer">
+                <FaGithub />
+              </a>
             </div>
           </div>
         </div>
       </div>
-
-
-
     </div>
   )
 }

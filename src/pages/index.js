@@ -11,85 +11,109 @@ const Index = ({ data, location }) => {
   const avatar = data.avatar.childImageSharp.fixed
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const cardProps = useSpring({ marginLeft: '0px', opacity: 1, from: { marginLeft: '-50vw', opacity: 0 }, duration: 2000, delay: 500, config: config.tense })
-  const card2Props = useSpring({ marginTop: '0px', opacity: 1, from: { marginTop: '30vh', opacity: 0 }, duration: 2000, delay: 1500, config: config.slow })
   const sidebarProps = useSpring({ opacity: 1, from: { opacity: 0 }, config: config.slow })
+
   return (
     <Layout>
       <SEO
         title={siteTitle}
         description={'Personal portfolio and legal blog.'} />
-      <div className="container"
-        css={css`
-          padding-top: 30px;
-          padding-bottom: 30px;
-          min-height: 85vh;
-        `}>
-        <div className="jumbotron"
+      <div className="jumbotron">
+        <h1 className="display-4">Welcome to my Website!</h1>
+        <p className="lead">Please check out my latest blog posts on patent law, and other IP issues.</p>
+      </div>
+      <div className="row">
+        <div className="col-md-6 container"
           css={css`
-            background-color: #ffffffaa;
-            padding: 10px;
+            padding: 15px;
+            min-height: 85vh;
           `}
         >
-          <h1 className="display-4">Welcome to my Website!</h1>
-          <p className="lead">Please check out my latest blog posts on patent law, and other IP issues.</p>
-          <p className="lead">
-            <a href="/Theodore_Rand_CV.pdf" className="btn btn-sm btn-primary">Download my CV</a>
-          </p>
-        </div>
-        <div className="row">
-          <div className="col-md-6">
-            <animated.div
-              style={cardProps}
-              className="container"
-              css={css`margin-bottom: 10px;`}>
-              <Bio avatar={avatar} />
-            </animated.div>
-            <div className="container">
-              <animated.div className="home-card card"
-                style={card2Props}
-                css={css`
-                margin: auto;
-                text-align: center;
-                border-radius: 0;
-                border: 4px solid var(--color-secondary-lighter);
-                min-height: 200px;
-                margin-bottom: 10px;
-              `}
-              >
-                <h4 className="card-title">Legal Disclaimer</h4>
-                <span className="card-body">
-                  <small>The information provided on this website does not, and is not intended to, 
-                  constitute legal advice; instead, all information, content, and materials 
-                  available on this site are for general informational purposes only.</small>
-                </span>
-              </animated.div>
+          <div className="container"
+            css={css`
+              margin-bottom: 10px;
+            `}
+          >
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active"
+                  css={css`
+        background-color: #eeeeee66;
+      `}>
+                  <img class="d-block w-100" src="/new-blog-coming-soon-image.png" alt="First slide" />
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="..." alt="Second slide" />
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="..." alt="Third slide" />
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
           </div>
-          <div className="col-md-6">
-            <animated.div className="card home-card"
-              css={css`
-                padding: 20px;
-                background-color: #ffffff66;
-              `}
-              style={sidebarProps}
-            >
-              <p>Looking for law school flashcards?</p>
-              <a className="btn btn-lg btn-warning mt-auto" href="/flashcards">Go to Flashcards</a>
-            </animated.div>
-            <animated.div className="card home-card"
-              css={css`
-                padding: 20px;
-                background-color: #ffffff66;
-                min-height: 200px;
-              `}
-              style={sidebarProps}
-            >
-              <p>Want Recent Federal Circuit Decisions?</p>
-              <a href="/tracker" className="btn btn-lg btn-primary mt-auto">Go to Tracker</a>
-            </animated.div>
 
-          </div>
+          <animated.div
+            style={cardProps}
+            className="container"
+            css={css`margin-bottom: 10px;`}>
+            <Bio avatar={avatar} />
+          </animated.div>
         </div>
+        <animated.div
+          className="col-md-5 ml-auto"
+          style={sidebarProps}
+          css={css`
+              background-color: #eeeeee66;
+              padding: 10px;
+            `}>
+          <div
+            className="container"
+            css={css`
+                background-color: white;
+                padding: 30px;
+                margin-bottom: 10px;
+              `}
+          >
+            <h5>Legal Disclaimer</h5>
+            <small>The information provided on this website does not, and is not intended to,
+            constitute legal advice; instead, all information, content, and materials
+              available on this site are for general informational purposes only.</small>
+          </div>
+          <div
+            className="container"
+            css={css`
+                background-color: white;
+                padding: 30px;
+                margin-bottom: 10px;
+              `}
+          >
+            <h5>Looking for law school flashcards?</h5>
+            <a className="btn btn-lg btn-warning mt-auto" href="/flashcards">Go to Flashcards</a>
+          </div>
+          <div
+            className="container"
+            css={css`
+                background-color: white;
+                padding: 30px;
+              `}
+          >
+            <p>Want Recent Federal Circuit Decisions?</p>
+            <a href="/tracker" className="btn btn-lg btn-primary mt-auto">Go to Tracker</a>
+          </div>
+        </animated.div>
       </div>
     </Layout>
   )

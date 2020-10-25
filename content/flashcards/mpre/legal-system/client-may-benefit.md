@@ -1,5 +1,5 @@
 ---
-title: Client may Material Benefit"
+title: Client may Material Benefit
 date: "2020-10-23T00:01:37.121Z"
 description: "Flashcard question about lawyers' interaction with the legal system."
 type: "flashcard"

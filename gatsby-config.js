@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Claim Kraken`,
+    title: `Ted Rand - Personal Blog`,
     author: {
       name: `Ted Rand`,
       summary: `An incoming Associate of Morgan Lewis's Silicon Valley office, and JavaScript hobbyist.`,
@@ -17,6 +17,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/static`,
+        name: ``,
       },
     },
     {

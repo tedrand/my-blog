@@ -31,6 +31,12 @@
   --color-accent: #d1dce5;
 }
 
+.jumbotron {
+  padding: 25px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
 .navbar-dark {
   background-color: var(--color-dark);
 }
@@ -51,12 +57,16 @@
   min-height: 85vh;
 }
 
+.icon-row {
+  padding-top: 10px;
+  margin: auto;
+}
+
 .icon-row a {
-  margin-right: 0.5em;
+  margin: 0 0.25em;
 }
 
 .icon-row a * {
-  width: 25px;
   color: var(--color-primary-lighter);
 }
 
@@ -64,10 +74,17 @@
   color: var(--color-primary);
 }
 
+.icon-row a svg {
+  font-size: 28px;
+}
+
 .home-card {
+  /* width: 420px; */
   min-height: 200px;
   margin-bottom: 10px;
   padding: 2px;
+  border: 4px solid var(--color-secondary-lighter);
+  border-radius: 0;
 }
 
 .home-card .card-title {

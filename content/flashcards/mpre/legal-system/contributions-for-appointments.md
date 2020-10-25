@@ -1,5 +1,5 @@
 ---
-title: Political Contributions for Appointments"
+title: Political Contributions for Appointments
 date: "2020-10-23T00:07:37.121Z"
 description: "Flashcard question about lawyers' interaction with the legal system."
 type: "flashcard"
