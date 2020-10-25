@@ -18,10 +18,7 @@ const Index = ({ data, location }) => {
       <SEO
         title={siteTitle}
         description={'Personal portfolio and legal blog.'} />
-      <div className="jumbotron">
-        <h1 className="display-4">Welcome to my Website!</h1>
-        <p className="lead">Please check out my latest blog posts on patent law, and other IP issues.</p>
-      </div>
+
       <div className="row">
         <div className="col-md-6 container"
           css={css`
@@ -29,42 +26,10 @@ const Index = ({ data, location }) => {
             min-height: 85vh;
           `}
         >
-          <div className="container"
-            css={css`
-              margin-bottom: 10px;
-            `}
-          >
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active"
-                  css={css`
-        background-color: #eeeeee66;
-      `}>
-                  <img class="d-block w-100" src="/new-blog-coming-soon-image.png" alt="First slide" />
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="..." alt="Second slide" />
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="..." alt="Third slide" />
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
+          <div className="jumbotron">
+            <h1 className="display-4">Welcome to my Website!</h1>
+            <p className="lead">Please check out my latest blog posts on patent law, and other IP issues.</p>
           </div>
-
           <animated.div
             style={cardProps}
             className="container"
