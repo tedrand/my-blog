@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
@@ -16,7 +16,7 @@ const BlogIndex = ({ data, location }) => {
         <h5>A Patent Law Blog</h5>
         <hr />
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
-        <div className="col-md-8">
+        <div className="col">
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
             return (
@@ -27,15 +27,19 @@ const BlogIndex = ({ data, location }) => {
                   margin-bottom: 10px;
                   margin-right: 5px;
                 `}>
-                <div className="col-md-4">
-                  <h3>
-                    <Link to={post.fields.slug} itemProp="url">
+                <div className="col-md-5">
+                  <h4>
+                    <a href={post.fields.slug} itemProp="url"
+                      css={css`
+                        text-decoration: none;
+                        color: var(--color-primary);
+                      `}>
                       <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h3>
+                    </a>
+                  </h4>
                   <small>{post.frontmatter.date}</small>
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-7">
                   <section>
                     <p
                       dangerouslySetInnerHTML={{

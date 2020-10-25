@@ -1,7 +1,7 @@
 ---
-title: SAS Inst. v. Iancu
-date: "2020-10-12T18:03:03.284Z"
-description: "In the landmark decision SAS v. Iancu, the Court held that the USPTO must institute an IPR on all claims if issued at all."
+title: 'SAS Inst. v. Iancu: SCOTUS Quashes Partial Institutions at the PTAB'
+date: 2020-10-12
+description: In the landmark decision SAS v. Iancu, the Court held that the USPTO must institute an IPR on all claims if issued at all.
 type: "blog"
 published: true
 ---

@@ -10,71 +10,55 @@ import Bio from "../components/bio"
 const Index = ({ data, location }) => {
   const avatar = data.avatar.childImageSharp.fixed
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const cardProps = useSpring({ marginLeft: '0px', opacity: 1, from: { marginLeft: '-50vw', opacity: 0 }, duration: 2000, delay: 500, config: config.tense })
-  const sidebarProps = useSpring({ opacity: 1, from: { opacity: 0 }, config: config.slow })
+  
+  // react-spring animations
+  const jumboProps = useSpring({ height: '225px', padding: '25px', from: { height: '0px', padding: '0px' }, duration: 2000, delay: 2500, config: config.gentle })
+  const cardProps = useSpring({ marginLeft: '0px', opacity: 1, from: { marginLeft: '-50vw', opacity: 0 }, duration: 2000, delay: 1500, config: config.gentle })
+  const sidebarProps = useSpring({ marginTop: '0px', from: { marginTop: '100vh' }, config: config.slow })
 
   return (
     <Layout>
       <SEO
         title={siteTitle}
         description={'Personal portfolio and legal blog.'} />
-
       <div className="row">
         <div className="col-md-6 container"
           css={css`
             padding: 15px;
             min-height: 85vh;
-          `}
-        >
-          <div className="jumbotron">
+          `}>
+          <animated.div className="jumbotron" style={jumboProps}
+            css={css`
+              /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
+              background: -moz-linear-gradient(-45deg,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(-45deg,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(135deg,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+            `}>
             <h1 className="display-4">Welcome to my Website!</h1>
             <p className="lead">Please check out my latest blog posts on patent law, and other IP issues.</p>
-          </div>
+          </animated.div>
           <animated.div
             style={cardProps}
-            className="container"
-            css={css`margin-bottom: 10px;`}>
+            className="container">
             <Bio avatar={avatar} />
           </animated.div>
         </div>
         <animated.div
-          className="col-md-5 ml-auto"
-          style={sidebarProps}
-          css={css`
-              background-color: #eeeeee66;
-              padding: 10px;
-            `}>
-          <div
-            className="container"
-            css={css`
-                background-color: white;
-                padding: 30px;
-                margin-bottom: 10px;
-              `}
-          >
+          className="sidebar col-md-5 ml-auto"
+          style={sidebarProps}>
+          <div className="container sidebar-card">
             <h5>Legal Disclaimer</h5>
             <small>The information provided on this website does not, and is not intended to,
             constitute legal advice; instead, all information, content, and materials
               available on this site are for general informational purposes only.</small>
           </div>
-          <div
-            className="container"
-            css={css`
-                background-color: white;
-                padding: 30px;
-                margin-bottom: 10px;
-              `}
-          >
+          <div className="container sidebar-card">
             <h5>Looking for law school flashcards?</h5>
-            <a className="btn btn-lg btn-warning mt-auto" href="/flashcards">Go to Flashcards</a>
+            <a className="btn btn-lg btn-primary mt-auto" href="/flashcards">Go to Flashcards</a>
           </div>
-          <div
-            className="container"
-            css={css`
-                background-color: white;
-                padding: 30px;
-              `}
-          >
+          <div className="container sidebar-card">
             <p>Want Recent Federal Circuit Decisions?</p>
             <a href="/tracker" className="btn btn-lg btn-primary mt-auto">Go to Tracker</a>
           </div>
