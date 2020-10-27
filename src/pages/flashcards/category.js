@@ -5,16 +5,16 @@ import { css } from "@emotion/core"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-
-
-const CrimProFlashcards = ({ data, location }) => {
+const FlashcardsCategory = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes.filter(function (node) {
     return node.fields.slug.indexOf(location.pathname.split("/")[2]) !== -1
   })
 
   return (
     <Layout location={location}>
-      <SEO title={"Lawschool Flashcards - " + location.pathname.split("/")[2]} />
+      <SEO
+        title={"Lawschool Flashcards - " + location.pathname.split("/")[2]}
+      />
       <div className="container paper-container">
         <h1>Law School Flashcards</h1>
         <h3>Category: {location.pathname.split("/")[2]}</h3>
@@ -24,13 +24,16 @@ const CrimProFlashcards = ({ data, location }) => {
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
             return (
-              <div className="col" key={post.fields.slug}
+              <div
+                className="col"
+                key={post.fields.slug}
                 css={css`
                   border: 2px solid var(--color-secondary-lighter);
                   padding: 10px;
                   margin-bottom: 10px;
                   margin-right: 5px;
-                `}>
+                `}
+              >
                 <div>
                   <h3>
                     <Link to={post.fields.slug} itemProp="url">
@@ -58,7 +61,7 @@ const CrimProFlashcards = ({ data, location }) => {
   )
 }
 
-export default CrimProFlashcards
+export default FlashcardsCategory
 
 export const pageQuery = graphql`
   query getFlashcardCategory {

@@ -16,15 +16,15 @@ Please read this policy carefully to understand the policies and practices regar
 
 If you visit the Website to browse, read, or download information, your browser automatically sends information to the Website's Google Analytics platform, such as the:
 
-*   Internet domain through which you access the Internet (e.g., yourServiceProvider.com if you use a commercial Internet Service Provider (\"ISP\"), or yourSchool.edu if you use an internet account from your school);
+- Internet domain through which you access the Internet (e.g., yourServiceProvider.com if you use a commercial Internet Service Provider (\"ISP\"), or yourSchool.edu if you use an internet account from your school);
 
-*   Internet Protocol (\"IP\") address of the computer you are using;
+- Internet Protocol (\"IP\") address of the computer you are using;
 
-*   type of browser software and operating system you are using;
+- type of browser software and operating system you are using;
 
-*   date and time you access the Website; and
+- date and time you access the Website; and
 
-*   the Internet address of the site from which you linked directly to the Website.
+- the Internet address of the site from which you linked directly to the Website.
 
 I will use this information as aggregate data to help me maintain this site, e.g., to determine the number of visitors to different sections of the Website, to ensure the Website is working properly, and to help me make the Website more accessible and useful. I will not use this information to identify individuals, except for site security or law enforcement purposes. I will not obtain personally-identifying information about you when you visit the Website, unless you choose to provide such information.
 

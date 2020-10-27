@@ -1,14 +1,14 @@
 ---
-title: 'American Axle v. Neapco: CAFC Denies Stay'
+title: "American Axle v. Neapco: CAFC Denies Stay"
 date: 2020-10-25
 description: "The Federal Circuit recently refused to stay a patent invalidity case, acknowledging that the plaintiff had filed petition for writ of certiorari to the Supreme Court"
 type: "blog"
 published: true
 ---
 
-On Friday, the U.S. Court of Appeals for Federal Circuit (CAFC) denied plaintiff-appellant American Axle & Manufacturing, Inc.'s (AAM's) motion to stay issuance of the mandate in light of a petition for Supreme Court review. 
+On Friday, the U.S. Court of Appeals for Federal Circuit (CAFC) denied plaintiff-appellant American Axle & Manufacturing, Inc.'s (AAM's) motion to stay issuance of the mandate in light of a petition for Supreme Court review.
 
-In evaluating AAM's case, the CAFC first looked to the Federal Rule of Appellate Procedure 41, which provides that a motion for stay of the mandate "must show that the petition would present a substantial question and that there is good cause for a stay." The court noted that it previously applied the rule to deny a stay in <i>Teva Pharms. USA, Inc. v. Sandoz, Inc.</i>.[^1] The requirements for a showing good cause for a stay are that a "(1) a reasonable probability that four Justices will consider the issue sufficiently meritorious to grant certiorari; (2) a fair prospect that a majority of the Court will vote to reverse the judgment below; and (3) a likelihood that irreparable harm will result from the denial of a stay." In <i>Teva</i>, the CAFC denied the stay based on prong (3), finding "the extraordinary relief that Teva \[sought was] unwarranted," since they would be able to recover damages for past infringement if they were to win at the Supreme Court. 
+In evaluating AAM's case, the CAFC first looked to the Federal Rule of Appellate Procedure 41, which provides that a motion for stay of the mandate "must show that the petition would present a substantial question and that there is good cause for a stay." The court noted that it previously applied the rule to deny a stay in <i>Teva Pharms. USA, Inc. v. Sandoz, Inc.</i>.[^1] The requirements for a showing good cause for a stay are that a "(1) a reasonable probability that four Justices will consider the issue sufficiently meritorious to grant certiorari; (2) a fair prospect that a majority of the Court will vote to reverse the judgment below; and (3) a likelihood that irreparable harm will result from the denial of a stay." In <i>Teva</i>, the CAFC denied the stay based on prong (3), finding "the extraordinary relief that Teva \[sought was] unwarranted," since they would be able to recover damages for past infringement if they were to win at the Supreme Court.
 
 The Federal Circuit denied American Axle's (AAM's) argument that good cause for a stay existed because AAM "intend\[ed] to petition for certiorari with regard to the entirety" of \[the CAFC's] judgment" and that "\[s]ignificant burdens and expenses would accrue." Looking to numerous precedent, the CAFC reiterated that "\[m]ere litigation expense, even substantial and unrecoupable cost, does not constitute irreparable injury."
 

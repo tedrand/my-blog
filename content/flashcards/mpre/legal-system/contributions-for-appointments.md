@@ -7,4 +7,5 @@ question: "What is rule about a lawyer or law firm making political contribution
 ---
 
 A lawyer may not accept an appointment by a judge if the lawyer or law firm makes a political contribution for the purpose of obtaining or being considered for such an appointment.
+
 - An appointment to provide <b>substantially uncompensated services<b> is excluded from this prohibition.

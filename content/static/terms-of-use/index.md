@@ -8,7 +8,7 @@ type: "static"
 
 These terms of use are entered into by and between You and Me, Ted Rand (sole proprietor of TedRand.com (the \"Website\")). The following terms and conditions govern your access to and use of the Website, including any content, functionality, and services offered on or through the Website.
 
-Please read the Terms of Use carefully before you start to use the Website. By using the Website, you accept and agree to be bound and abide by these Terms of Use and our Privacy Policy, found at [the Website's privacy policy](\"https://www.tedrand.com/privacy-policy\"). If you do not want to agree to these Terms of Use or the Privacy Policy, you must not access or use the Website.
+Please read the Terms of Use carefully before you start to use the Website. By using the Website, you accept and agree to be bound and abide by these Terms of Use and our Privacy Policy, found at [the Website's privacy policy]("https://www.tedrand.com/privacy-policy"). If you do not want to agree to these Terms of Use or the Privacy Policy, you must not access or use the Website.
 
 ## Changes to the Terms of Use
 
@@ -20,14 +20,13 @@ Your continued use of the Website following the posting of revised Terms of Use 
 
 I reserve the right to withdraw or amend this website, and any service or material I provide on the Website, at my sole discretion without notice. I will not be liable if for any reason all or any part of the Website is unavailable at any time or for any period. From time to time, I may restrict access to some parts of the Website, or the entire Website, to users, including registered users.
 
-
 **You are responsible for both:**
 
-* Making all arrangements necessary for you to have access to the Website.
+- Making all arrangements necessary for you to have access to the Website.
 
-* Ensuring that all persons who access the Website through your internet connection are aware of these Terms of Use and comply with them.
+- Ensuring that all persons who access the Website through your internet connection are aware of these Terms of Use and comply with them.
 
-* To access the Website or some of the resources it offers, you may be asked to provide certain registration details or other information. It is a condition of your use of the Website that all information you provide to register with this Website or otherwise, including, but not limited to, through the use of any interactive features on the Website, is governed by our Privacy Policy, and you conesent to all actions I take with respect to your information consistent with the Privacy Policy.
+- To access the Website or some of the resources it offers, you may be asked to provide certain registration details or other information. It is a condition of your use of the Website that all information you provide to register with this Website or otherwise, including, but not limited to, through the use of any interactive features on the Website, is governed by our Privacy Policy, and you conesent to all actions I take with respect to your information consistent with the Privacy Policy.
 
 If you choose, or are provided with, a user name, password, or any other piece of information as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any other person or entity. You also acknowledge that your account is personal to you and agree not to provide any other person with access to this Website or portions of it using your user name, password, or other security information. You agree to notify me immediately of any unauthorized access to or use of your user name or password or any other breach of security. You also agree to ensure that you exit from your account at the end of each session. You should use particular caution when accessing your account from a public or shared computer so that others are not able to view or record your password or other personal information.
 
@@ -39,23 +38,23 @@ The Website and its entire contents, features, and functionality (including but 
 
 These Terms of Use permit you to use use the Website for your personal, non-commercial use only. You must not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on my Webiste, except as follows:
 
-*   Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing of those materials.
+- Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing of those materials.
 
-*   You may store files that are automatically cached by your Web browser for display enhancement purposes.
+- You may store files that are automatically cached by your Web browser for display enhancement purposes.
 
-*   You may print or download one copy of a reasonable number of pages of the Website for your own personal, non-commercial use and not for further reproduction, publication, or distribution.
+- You may print or download one copy of a reasonable number of pages of the Website for your own personal, non-commercial use and not for further reproduction, publication, or distribution.
 
-*   If I provide desktop, mobile, or other applications for download, you may download a single copy to your computer or mobile device solely for your own personal, non-commercial use, provided you agree to be bound by our end user license agreement for such applications.
+- If I provide desktop, mobile, or other applications for download, you may download a single copy to your computer or mobile device solely for your own personal, non-commercial use, provided you agree to be bound by our end user license agreement for such applications.
 
-*   If I provide social media features with certain content, you may take such actions as are enabled by such features.
+- If I provide social media features with certain content, you may take such actions as are enabled by such features.
 
 You must not:
 
-*   Modify copies of any materials from this site.
+- Modify copies of any materials from this site.
 
-*   Use any illustrations, photographs, video or audio sequences, or any graphics separately from the accompanying text.
+- Use any illustrations, photographs, video or audio sequences, or any graphics separately from the accompanying text.
 
-*   Delete or alter any copyright, trademark, or other proprietary rights notices from copies of materials from this site.
+- Delete or alter any copyright, trademark, or other proprietary rights notices from copies of materials from this site.
 
 You must not access or use for any commercial purposes any part of the Website or any services or materials available through the Website.
 
@@ -71,35 +70,35 @@ The Website name, the terms OpinionTracker, and all related names, logos, produc
 
 You may use the Website only for lawful purposes and in accordance with these Terms of Use. You agree not to use the Website:
 
-*   In any way that violates any applicable federal, state, local, or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from the US or other countries).
+- In any way that violates any applicable federal, state, local, or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from the US or other countries).
 
-*   For the purposes of exploiting, harming, or attempting to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information, or otherwise.
+- For the purposes of exploiting, harming, or attempting to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information, or otherwise.
 
-*   To send, knowningly receive, upload, download, use, or re-use any material that does not comply with the Content Standards set out in the these Terms of Use.
+- To send, knowningly receive, upload, download, use, or re-use any material that does not comply with the Content Standards set out in the these Terms of Use.
 
-*   To transmit, or procure the sending of, any advertising or promotional material without my prior written consent, including any \"junk mail,\" \"chain letter,\" \"spam,\" or any other similar solicitation.
+- To transmit, or procure the sending of, any advertising or promotional material without my prior written consent, including any \"junk mail,\" \"chain letter,\" \"spam,\" or any other similar solicitation.
 
-*   To impersonate or attempt to impersonate me, another user, or any other person or entity (including, without limitation, by using email addresses or screen names associated with any of the foregoing).
+- To impersonate or attempt to impersonate me, another user, or any other person or entity (including, without limitation, by using email addresses or screen names associated with any of the foregoing).
 
-*   To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Website, or which, as determined by me, may harm me or users of the Website, or expose either to liability.
+- To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Website, or which, as determined by me, may harm me or users of the Website, or expose either to liability.
 
 Additionally, you agree not to:
 
-*   Use the Website in any manner that could disable, overburden, damage, or impair the site or interface with any other party's use of the Website, including their ability to engage in real time activities through the Website.
+- Use the Website in any manner that could disable, overburden, damage, or impair the site or interface with any other party's use of the Website, including their ability to engage in real time activities through the Website.
 
-*   Use any robot, spider, or other automatic device, process, or means to access the Website for any purpose, including monitoring or copying any of the material on the Website.
+- Use any robot, spider, or other automatic device, process, or means to access the Website for any purpose, including monitoring or copying any of the material on the Website.
 
-*   Use any manual process to monitor or copy any of the material on the Website, or for any other purpose not expressly authorized in these Terms of Use, without my prior written consent.
+- Use any manual process to monitor or copy any of the material on the Website, or for any other purpose not expressly authorized in these Terms of Use, without my prior written consent.
 
-*   Use any device, software, or routine that inteferes with the proper working of the Website.
+- Use any device, software, or routine that inteferes with the proper working of the Website.
 
-*   Introduce any viruses, Trojan horses, worms, logic bombs, or other material that is malicious or technologically harmful.
+- Introduce any viruses, Trojan horses, worms, logic bombs, or other material that is malicious or technologically harmful.
 
-*   Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Website, the server on which the Website is stored, or any server, computer, or database connected to the Website.
+- Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Website, the server on which the Website is stored, or any server, computer, or database connected to the Website.
 
-*   Attack the Website via a denial-of-service attack or a distributed denial-of-service attack.
+- Attack the Website via a denial-of-service attack or a distributed denial-of-service attack.
 
-*   Otherwise attempt to interfere with the proper working of the Website.
+- Otherwise attempt to interfere with the proper working of the Website.
 
 **User Contributions**
 
@@ -111,11 +110,11 @@ Any User Contribution you post to the site will be considered non-confidential a
 
 You represent and warrant that:
 
-*   You own or control all rights in and to the User Contributions and have the right to grant the license granted aboce to me.
+- You own or control all rights in and to the User Contributions and have the right to grant the license granted aboce to me.
 
-*   All of your User Contributions do and will comply with these Terms of Use.
+- All of your User Contributions do and will comply with these Terms of Use.
 
-*   You understand and acknowledge that you are responsible for any User Contributions you submit or contribute, and you, not the Company, have full responsibility for such content, including its legality, reliability, accuracy, and appropriateness.
+- You understand and acknowledge that you are responsible for any User Contributions you submit or contribute, and you, not the Company, have full responsibility for such content, including its legality, reliability, accuracy, and appropriateness.
 
 I am not responsible or liable to any third party for the content or accuracy of any User Contributions posted by you or any other user of the Website.
 
@@ -129,7 +128,7 @@ Take any action with respect to any User Contribution that I deem necessary or a
 
 Disclose your identity or other information about you to any third party who claims that material posted by you violates their rights, including their intellectual property rights or their right to privacy.
 
-Take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the Website. 
+Take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the Website.
 
 Terminate or suspend your access to all or part of the Website for any or no reason, including without limitation, any violation of these Terms of Use.
 
@@ -141,25 +140,25 @@ However, I cannot and do not undertake to review all material before it is poste
 
 These content standards apply to any and all User Contributions and use of Interactive Services. User Contributions must in their entirety comply with all applicable federal, state, local, and international laws and regulations. Without limiting the foregoing, User Contributions must not:
 
-*   Contain any material that is defamatory, obscene, indecent, abusive, offensive, harassing, violent, hateful, inflammatory, or otherwise objectionable.
+- Contain any material that is defamatory, obscene, indecent, abusive, offensive, harassing, violent, hateful, inflammatory, or otherwise objectionable.
 
-*   Promote sexually explicit or pornographic material, violence, or discrimination based on race, sex, religion, nationality, disability, sexual orientation, or age.
+- Promote sexually explicit or pornographic material, violence, or discrimination based on race, sex, religion, nationality, disability, sexual orientation, or age.
 
-*   Infringe any patent, trademark, trade secret, copyright, or other intellectual property or other rights of any other person.
+- Infringe any patent, trademark, trade secret, copyright, or other intellectual property or other rights of any other person.
 
-*   Violate the legal rights (including the rights of publicity and privacy) of others or contain any material that could give rise to any civil or criminal liability under applicable laws or regulations or that otherwise may be in conflict with these Terms of Use and my Privacy Policy.
+- Violate the legal rights (including the rights of publicity and privacy) of others or contain any material that could give rise to any civil or criminal liability under applicable laws or regulations or that otherwise may be in conflict with these Terms of Use and my Privacy Policy.
 
-*   Be likely to deceive any person.
+- Be likely to deceive any person.
 
-*   Promote any illegal activity, or advocate, promote, or assist any unlawful act.
+- Promote any illegal activity, or advocate, promote, or assist any unlawful act.
 
-*   Cause annoyance, inconvenience, or needless anxiety or be likely to upset embarrass, alarm, or annoy any other person.
+- Cause annoyance, inconvenience, or needless anxiety or be likely to upset embarrass, alarm, or annoy any other person.
 
-*   Impersonate any other person or misrepresent your identity or affiliation with any person or organization.
+- Impersonate any other person or misrepresent your identity or affiliation with any person or organization.
 
-*   Involve commercial activities or sales, such as contests, sweepstakes, and other sales promotions, barter, or advertising.
+- Involve commercial activities or sales, such as contests, sweepstakes, and other sales promotions, barter, or advertising.
 
-*   Give the impression that they emanate from or are endorsed by me or any other person or entity, if this is not the case.
+- Give the impression that they emanate from or are endorsed by me or any other person or entity, if this is not the case.
 
 **Copyright Infringement**
 
@@ -185,21 +184,21 @@ You may link to my homepage, provided you do so in a way that is fair and legal 
 
 This Website may provide certain social media features that enable you to:
 
-*   Link from your own or certain third-party websites to certain content on this website.
+- Link from your own or certain third-party websites to certain content on this website.
 
-*   Send emails or other communications with certain content, or links to certain content, on this Website.
+- Send emails or other communications with certain content, or links to certain content, on this Website.
 
-*   Cause limited portions of content on this Website to be displayed or appear to be displayed on your own or certain third-party websites.
+- Cause limited portions of content on this Website to be displayed or appear to be displayed on your own or certain third-party websites.
 
-*   You may use these features solely as they are provided by me and solely with respect to the content they are displayed with. Subject to the foregoing, you must not:
+- You may use these features solely as they are provided by me and solely with respect to the content they are displayed with. Subject to the foregoing, you must not:
 
-*   Establish a link from any website that is not owned by you.
+- Establish a link from any website that is not owned by you.
 
-*   Cause the Website or portions of it to be displayed on, or appeared to be displayed by, any other site, for example, framing, deep linking, or in-line linking.
+- Cause the Website or portions of it to be displayed on, or appeared to be displayed by, any other site, for example, framing, deep linking, or in-line linking.
 
-*   Link to any part of the Website other than the homepage.
+- Link to any part of the Website other than the homepage.
 
-*   Otherwise take any action with respect to the materials on this Website that is inconsistent with any provision of these Terms of Use.
+- Otherwise take any action with respect to the materials on this Website that is inconsistent with any provision of these Terms of Use.
 
 The website from which you are linking, or on which you make certain content accessible, must comply in all respects with the Content Standards set out in these Terms of Use.
 

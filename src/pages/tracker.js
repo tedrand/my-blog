@@ -2,22 +2,8 @@ import React from "react"
 import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
-
-function formatLocalPath(path) {
-  let splitPath = path.split("/")
-  let slug = splitPath[splitPath.length - 1]
-  let splitSlug = slug.split("_")
-  for (let i = 0; i < splitSlug.length; i++) {
-    // check for big v.
-    if (splitSlug[i] !== "v.") {
-      splitSlug[i] =
-        splitSlug[i].charAt(0).toUpperCase() + splitSlug[i].substring(1)
-    }
-  }
-  let name = splitSlug.join(" ")
-  name = name.substr(0, name.lastIndexOf("."))
-  return { slug, name }
-}
+import TrackerTable from "../components/tracker/table"
+import { formatLocalPath } from "../utils"
 
 class Tracker extends React.Component {
   constructor(props) {
@@ -55,53 +41,31 @@ class Tracker extends React.Component {
         })
       })
   }
+
+  loading() {
+    return (
+      <Layout location={"/tracker"}>
+        <div
+          className="container paper-container"
+          css={css`min-height: 90vh;`}>
+          <div>Loading...</div>
+        </div>
+      </Layout>
+    )
+  }
+
   render() {
     const { error, isLoaded, items } = this.state
     if (error) {
       return <div>Error: {error.message}</div>
     } else if (!isLoaded) {
-      return (
-        <Layout location={"/tracker"}>
-          <div className="container paper-container"
-            css={css`
-            min-height: 90vh;
-          `}>
-            <div>Loading...</div>
-          </div>
-        </Layout>
-      )
+      return this.loading()
     } else {
       return (
         <Layout location={"/tracker"}>
           <div className="container paper-container">
             <h1>CAFC Tracker</h1>
-            <table className="table">
-              <thead>
-                <tr>
-                  <th scope="col">Case Name</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Download</th>
-                </tr>
-              </thead>
-              <tbody>
-                {items.map(row => (
-                  <tr>
-                    <td>{row.name}</td>
-                    <td>{new Date(row.date_created).toDateString()}</td>
-                    <td>
-                    <form method="get" action={row.download_url}>
-                      <button
-                        className="btn btn-primary"
-                        href={row.download_url}
-                      >
-                        Download
-                      </button>
-                    </form>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <TrackerTable items={items} />
           </div>
         </Layout>
       )

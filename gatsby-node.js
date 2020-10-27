@@ -1,10 +1,10 @@
-const { createFilePath } = require(`gatsby-source-filesystem`);
+const { catMap } = require(`./src/constants`)
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
-  
+
   if (page.path == "/flashcards/category/") {
-    for (cat of ["mpre", "criminal-procedure"]) {
+    for (cat of Object.keys(catMap)) {
       createPage({
         path: `/flashcards/${cat}/`,
         component: require.resolve(`./src/pages/flashcards/category.js`),
@@ -14,11 +14,11 @@ exports.onCreatePage = async ({ page, actions }) => {
   }
 }
 
-exports.createPages = require('./gatsby/create-pages') 
-exports.onCreateNode = require('./gatsby/on-create-node')
+exports.createPages = require("./gatsby/create-pages")
+exports.onCreateNode = require("./gatsby/on-create-node")
 
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions;
+  const { createTypes } = actions
 
   // Explicitly define the siteMetadata {} object
   // This way those will always be defined even if removed from gatsby-config.js
@@ -51,6 +51,5 @@ exports.createSchemaCustomization = ({ actions }) => {
       type Fields {
         slug: String
       }
-    `);
-};
-
+    `)
+}

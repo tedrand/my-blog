@@ -8,6 +8,7 @@ question: "What is the advocate-witness rule?"
 
 <b>Model Rule 3.7: Lawyer as Witness</b><br/>
 (a) a lawyer shall not act as advocate at a trial in which the lawyer is likely to be a necessary witness unless:
+
 <p class="_f-indent">
 (1) the testimony relates to an uncontested issue;<br/>
 (2) the testimony relates to the nature and value of legal services rendered in the case; or<br/>

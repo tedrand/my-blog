@@ -1,5 +1,5 @@
 ---
-title: "The Miranda Requirements"
+title: "Miranda - Exculpatory Statements"
 date: "2020-10-26T23:45:37.121Z"
 description: "Flashcard question about the Miranda Requirements."
 type: "flashcard"

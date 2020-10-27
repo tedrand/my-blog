@@ -113,10 +113,10 @@ module.exports = {
         googleAnalytics: {
           trackingId: `UA-106788722-1`,
           // Setting this parameter is optional
-          anonymize: true
+          anonymize: true,
         },
         // Defines the environments where the tracking should be available  - default is ["production"]
-        environments: ['production', 'development']
+        environments: ["production", "development"],
       },
     },
     // {

@@ -20,20 +20,25 @@ const BlogIndex = ({ data, location }) => {
           {posts.map(post => {
             const title = post.frontmatter.title || post.fields.slug
             return (
-              <div className="row"
+              <div
+                className="row"
                 css={css`
                   border: 2px solid var(--color-secondary-lighter);
                   padding: 10px;
                   margin-bottom: 10px;
                   margin-right: 5px;
-                `}>
+                `}
+              >
                 <div className="col-md-5">
                   <h4>
-                    <a href={post.fields.slug} itemProp="url"
+                    <a
+                      href={post.fields.slug}
+                      itemProp="url"
                       css={css`
                         text-decoration: none;
                         color: var(--color-primary);
-                      `}>
+                      `}
+                    >
                       <span itemProp="headline">{title}</span>
                     </a>
                   </h4>
@@ -54,7 +59,6 @@ const BlogIndex = ({ data, location }) => {
           })}
         </div>
       </div>
-
     </Layout>
   )
 }

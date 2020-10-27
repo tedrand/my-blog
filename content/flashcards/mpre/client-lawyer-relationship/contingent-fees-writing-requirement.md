@@ -7,6 +7,7 @@ question: "What is the writing requirement for contingent fees?"
 ---
 
 A contingent fee arrangement must be in writing, and must include:
+
 <p class="_f-indent">
 i) Signature of the client;<br />
 ii) Calculation methodology of the fee; and <br />

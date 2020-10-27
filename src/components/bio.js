@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import Image from "gatsby-image"
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"
+import SocialIcons from "./social-icons"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -35,40 +35,24 @@ const Bio = () => {
 
   return (
     <div className="card home-card">
-      <div className="card-body">
-        <div className="row">
-          <div className="col-sm-4"
-            css={css`text-align: center;`}>
-            <div className="card-title">
-              <h4>{author.name}</h4>
-            </div>
-            {avatar && (
-              <Image
-                fixed={avatar}
-                alt={author?.name || ``}
-                imgStyle={{ borderRadius: '30%' }}
-              />
-            )}
+      <div className="row">
+        <div className="col-sm-4"
+          css={css`text-align: center;`}>
+          <div className="card-title">
+            <h4>{author.name}</h4>
           </div>
-          <div className="col-sm-6">
-            <div className="card-text">
-              <small>{author?.summary || null}</small>
-            </div>
-            <div className="row icon-row mt-auto">
-              <a href={`mailto: randtheodore@gmail.com`}
-                target="_blank" rel="noreferrer">
-                <FaEnvelope />
-              </a>
-              <a href={`https://www.linkedin.com/in/${social?.linkedIn || ``}`}
-                target="_blank" rel="noreferrer">
-                <FaLinkedin />
-              </a>
-              <a href={`https://github.com/tedrand`}
-                target="_blank" rel="noreferrer">
-                <FaGithub />
-              </a>
-            </div>
+          {avatar && (
+            <Image fixed={avatar}
+              alt={author?.name || ``}
+              imgStyle={{ borderRadius: "30%" }}
+            />
+          )}
+        </div>
+        <div className="col-sm-6">
+          <div className="card-text">
+            <small>{author?.summary || null}</small>
           </div>
+          <SocialIcons social={social} />
         </div>
       </div>
     </div>
