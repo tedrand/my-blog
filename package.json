@@ -41,6 +41,8 @@
     "gatsby-remark-responsive-iframe": "^2.4.17",
     "gatsby-remark-smartypants": "^2.3.13",
     "gatsby-source-filesystem": "^2.3.35",
+    "gatsby-source-mongodb": "^2.3.12",
+    "gatsby-transformer-json": "^2.4.15",
     "gatsby-transformer-remark": "^2.8.42",
     "gatsby-transformer-sharp": "^2.5.18",
     "jquery": "^3.5.1",

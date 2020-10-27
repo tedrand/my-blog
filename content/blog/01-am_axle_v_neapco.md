@@ -6,9 +6,9 @@ type: "blog"
 published: true
 ---
 
-On Friday, the U.S. Court of Appeals for Federal Circuit (CAFC) denied a motion to stay a case in light of a filing for Supreme Court Review. 
+On Friday, the U.S. Court of Appeals for Federal Circuit (CAFC) denied plaintiff-appellant American Axle & Manufacturing, Inc.'s (AAM's) motion to stay issuance of the mandate in light of a petition for Supreme Court review. 
 
-The CAFC first looked to the Federal Rule of Appellate Procedure and noted that it had been applied to deny a stay in <i>Teva Pharms. USA, Inc. v. Sandoz</i>. The requirements for a showing good cause for a stay are that a "(1) a reasonable probability that four Justices will consider the issue sufficiently meritorious to grant certiorari; (2) a fair prospect that a majority of the Court will vote to reverse the judgment below; and (3) a likelihood that irreparable harm will result from the denial of a stay." In <i>Teva</i>, the CAFC denied the stay based on prong (3), finding "the extraordinary relief that Teva \[sought was] unwarranted," since they would be able to recover damages for past infringement if they were to win at the Supreme Court. 
+In evaluating AAM's case, the CAFC first looked to the Federal Rule of Appellate Procedure 41, which provides that a motion for stay of the mandate "must show that the petition would present a substantial question and that there is good cause for a stay." The court noted that it previously applied the rule to deny a stay in <i>Teva Pharms. USA, Inc. v. Sandoz, Inc.</i>.[^1] The requirements for a showing good cause for a stay are that a "(1) a reasonable probability that four Justices will consider the issue sufficiently meritorious to grant certiorari; (2) a fair prospect that a majority of the Court will vote to reverse the judgment below; and (3) a likelihood that irreparable harm will result from the denial of a stay." In <i>Teva</i>, the CAFC denied the stay based on prong (3), finding "the extraordinary relief that Teva \[sought was] unwarranted," since they would be able to recover damages for past infringement if they were to win at the Supreme Court. 
 
 The Federal Circuit denied American Axle's (AAM's) argument that good cause for a stay existed because AAM "intend\[ed] to petition for certiorari with regard to the entirety" of \[the CAFC's] judgment" and that "\[s]ignificant burdens and expenses would accrue." Looking to numerous precedent, the CAFC reiterated that "\[m]ere litigation expense, even substantial and unrecoupable cost, does not constitute irreparable injury."
 
@@ -23,3 +23,8 @@ Finally, Judge Moore agreed with the CAFC as to the third prong despite the fact
 ### Conclusion
 
 While the ball is now in the Supreme Court's hands as to whether to take up the &sect;101 question that the CAFC has tee'd up for the Court, the case will be reopened in the district court, and new discovery will surely ensue. Readers are encouraged to review the original decision by the CAFC for more context on this interesting and potentially landmark &sect;101 battle.
+
+<hr>
+<small>
+<b>1.</b> 572 U.S. 1301, 1301-02 (2014) (Roberts, C.J., in chambers).
+<br />

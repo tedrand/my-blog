@@ -7,10 +7,26 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Bio from "../components/bio"
 
+function formatLocalPath(path) {
+  let splitPath = path.split("/")
+  let slug = splitPath[splitPath.length - 1]
+  let splitSlug = slug.split("_")
+  for (let i = 0; i < splitSlug.length; i++) {
+    // check for big v.
+    if (splitSlug[i] !== "v.") {
+      splitSlug[i] =
+        splitSlug[i].charAt(0).toUpperCase() + splitSlug[i].substring(1)
+    }
+  }
+  let name = splitSlug.join(" ")
+  name = name.substr(0, name.lastIndexOf("."))
+  return { slug, name }
+}
+
 const Index = ({ data, location }) => {
   const avatar = data.avatar.childImageSharp.fixed
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  
+
   // react-spring animations
   const jumboProps = useSpring({ height: '225px', padding: '25px', from: { height: '0px', padding: '0px' }, duration: 2000, delay: 2500, config: config.gentle })
   const cardProps = useSpring({ marginLeft: '0px', opacity: 1, from: { marginLeft: '-50vw', opacity: 0 }, duration: 2000, delay: 1500, config: config.gentle })
@@ -55,12 +71,27 @@ const Index = ({ data, location }) => {
               available on this site are for general informational purposes only.</small>
           </div>
           <div className="container sidebar-card">
-            <h5>Looking for law school flashcards?</h5>
-            <a className="btn btn-lg btn-primary mt-auto" href="/flashcards">Go to Flashcards</a>
+            <h5><u>Recent Federal Circuit Decisions</u></h5>
+            <div className="col">
+              {data.allCourtDataJson.nodes.map(node => {
+                const { name } = formatLocalPath(node.local_path)
+                return (
+                  <div className="row">
+                    <small>
+                      <a href={node.download_url}>
+                        - {name}
+                      </a>
+                    </small>
+                  </div>
+                )
+              })}
+            </div>
+            <p>Want More Recent Federal Circuit Decisions?</p>
+            <a href="/tracker" className="btn btn-lg btn-primary btn-block mt-auto">Go to Tracker</a>
           </div>
           <div className="container sidebar-card">
-            <p>Want Recent Federal Circuit Decisions?</p>
-            <a href="/tracker" className="btn btn-lg btn-primary mt-auto">Go to Tracker</a>
+            <h5>Looking for law school flashcards?</h5>
+            <a className="btn btn-lg btn-primary btn-block mt-auto" href="/flashcards">Go to Flashcards</a>
           </div>
         </animated.div>
       </div>
@@ -89,6 +120,13 @@ export const pageQuery = graphql`
           twitter
         }
         title
+      }
+    }
+    allCourtDataJson (limit: 5) {
+      nodes {
+        local_path
+        download_url
+        date_created
       }
     }
   }

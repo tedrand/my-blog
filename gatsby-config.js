@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ted Rand - Personal Blog`,
+    title: `Ted Rand | Patent Agent`,
     author: {
       name: `Ted Rand`,
       summary: `An incoming Associate of Morgan Lewis's Silicon Valley office, and JavaScript hobbyist.`,
@@ -40,6 +40,14 @@ module.exports = {
         name: `assets`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/data`,
+        name: `data`,
+      },
+    },
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -111,6 +119,17 @@ module.exports = {
         environments: ['production', 'development']
       },
     },
+    // {
+    //   // The name of the plugin
+    //   resolve: 'gatsby-source-mongodb',
+    //   options: {
+    //     dbName: `sample_training`,
+    //     collection: [`companies`],
+    //     server: { address: 'my-blog-1-shard-00-02.7tql1.mongodb.net', port: 27017},
+    //     auth: { user: 'Trips1133', password: 'Trips1133' },
+    //     extraParams: { ssl: true, authSource: `admin`, retryWrites: true }
+    //   }
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
