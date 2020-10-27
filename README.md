@@ -1,3 +1,5 @@
+![](https://img.shields.io/github/license/tedrand/my-blog)
+
 # personal-blog
 
 A Node.js app built to serve as my new personal website, built with Gatsby. The
