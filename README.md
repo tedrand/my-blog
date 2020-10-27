@@ -17,15 +17,13 @@
     <a href='https://codeclimate.com/github/tedrand/my-blog'>
       <img src="https://codeclimate.com/github/tedrand/my-blog/badges/issue_count.svg" alt="Logo" />
     </a>
-    <!-- <a href='https://www.codacy.com/app/Vagr9K/gatsby-advanced-starter?utm_source=github.com&utm_medium=referral&utm_content=Vagr9K/gatsby-advanced-starter&utm_campaign=Badge_Grade'>
-      <img src="https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820" alt="Logo" />
-    </a> -->
+    <a href='https://www.codacy.com/gh/tedrand/my-blog/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tedrand/my-blog&amp;utm_campaign=Badge_Grade'>
+      <img src="https://app.codacy.com/project/badge/Grade/56795858f41643a1987a6426970d74f3" alt="Logo" />
+    </a>
     <a href='https://github.com/prettier/prettier'>
       <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
     </a>
 </div>
-
-
 
 # personal-blog
 
@@ -37,18 +35,18 @@ written in markdown.
 
 To start, you will need to install Gatsby.
 
-```
+```console
 sudo npm i -g gatsby
 ```
 
 Then start the development server
 
-```
+```console
 gatsby develop
 ```
 
 OR
 
-```
+```console
 npm run start
 ```

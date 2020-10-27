@@ -14,4 +14,4 @@ function formatLocalPath(path) {
     return { slug, name }
 }
 
-export default { formatLocalPath }
+export { formatLocalPath }

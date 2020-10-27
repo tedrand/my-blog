@@ -1,7 +1,6 @@
 /* CSS Custom Properties Definitions */
 
 :root {
-
   /* Kingfisher Daisy */
   --color-primary-darkest: #251330;
   --color-primary-darker: #562d6e;
@@ -12,7 +11,7 @@
   /* Veridian */
   --color-secondary: #348064;
   --color-secondary-lighter: #41a07d;
-  --color-secondary-lightest:  rgba(112,166,146);
+  --color-secondary-lightest: rgba(112, 166, 146);
 
   /* Hot Curry */
   --color-tertiary: #806434;
@@ -21,11 +20,9 @@
 
   /* Eerie Black */
   --color-dark: #1b1b1b;
-
   --font-color-light: #dedede;
   --font-color-lighter: #f2f2f2;
-
-  --color-text: #2e353f;
+  --color-text:#2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   --color-heading-black: black;
@@ -59,11 +56,12 @@
 
 .sidebar {
   padding: 10px;
+
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#70a692+0,000000+100&0.65+0,0+100 */
-  background: -moz-linear-gradient(-45deg,  rgba(112,166,146,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -moz-linear-gradient(-45deg,rgba(112,166,146,0.65) 0%,rgba(0,0,0,0) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg,  rgba(112,166,146,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg,  rgba(112,166,146,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a670a692', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a670a692', endColorstr='#00000000',GradientType=1); /* IE6-9 fallback on horizontal gradient */
 }
 
 .sidebar-card {
@@ -142,9 +140,6 @@
 .flashcard .card-title {
   padding: 5px;
   border-bottom: 1px solid var(--color-secondary-lighter);
-}
-
-.flashcard .card-title {
   color: var(--color-primary);
   text-align: center;
 }

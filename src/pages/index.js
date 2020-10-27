@@ -102,7 +102,7 @@ const Index = ({ data, location }) => {
               {data.allCourtDataJson.nodes.map(node => {
                 const { name } = formatLocalPath(node.local_path)
                 return (
-                  <div className="row">
+                  <div className="row" key={node.download_url}>
                     <small>
                       <a href={node.download_url}>- {name}</a>
                     </small>
