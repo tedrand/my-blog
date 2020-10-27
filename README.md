@@ -1,4 +1,31 @@
-![](https://img.shields.io/github/license/tedrand/my-blog)
+<div align="center" style="margin-bottom:30px">
+    <a href="https://github.com/tedrand/my-blog/blob/main/LICENSE"><img src="https://img.shields.io/github/license/tedrand/my-blog" /></a>
+    <a href='https://github.com/tedrand/my-blog'>
+    <img src="https://img.shields.io/github/tag/tedrand/my-blog.svg" alt="Logo" />
+    </a>
+        <a href='https://github.com/tedrand/my-blog/stargazers'>
+    <img src="https://img.shields.io/github/stars/tedrand/my-blog.svg" alt="Logo" />
+    </a>
+</div>
+
+<div align="center"  style="margin-bottom:30px">
+    <img src="content/assets/icon.png" alt="Logo" width='200px' />
+</div>
+
+<div align="center">
+    <a href="https://codeclimate.com/github/tedrand/my-blog/maintainability"><img src="https://api.codeclimate.com/v1/badges/b55a83694a7d4df6e10b/maintainability" /></a>
+    <a href='https://codeclimate.com/github/tedrand/my-blog'>
+      <img src="https://codeclimate.com/github/tedrand/my-blog/badges/issue_count.svg" alt="Logo" />
+    </a>
+    <!-- <a href='https://www.codacy.com/app/Vagr9K/gatsby-advanced-starter?utm_source=github.com&utm_medium=referral&utm_content=Vagr9K/gatsby-advanced-starter&utm_campaign=Badge_Grade'>
+      <img src="https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820" alt="Logo" />
+    </a> -->
+    <a href='https://github.com/prettier/prettier'>
+      <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
+    </a>
+</div>
+
+
 
 # personal-blog
 
