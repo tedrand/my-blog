@@ -29,6 +29,8 @@
 
 # personal-blog
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e44407b616b844ed875dcb81ce61acbd)](https://app.codacy.com/gh/tedrand/my-blog?utm_source=github.com&utm_medium=referral&utm_content=tedrand/my-blog&utm_campaign=Badge_Grade)
+
 A Node.js app built to serve as my new personal website, built with Gatsby. The
 site utilizes Bootstrap components to enhance styling. The blog posts are
 written in markdown.
