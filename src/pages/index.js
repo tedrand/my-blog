@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
-import { useSpring, animated, config } from "react-spring"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,29 +11,6 @@ import { formatLocalPath } from "../utils"
 const Index = ({ data, location }) => {
   const avatar = data.avatar.childImageSharp.fixed
   const siteTitle = data.site.siteMetadata?.title || `Title`
-
-  // react-spring animations
-  const jumboProps = useSpring({
-    height: "225px",
-    padding: "25px",
-    from: { height: "0px", padding: "0px" },
-    duration: 2000,
-    delay: 2500,
-    config: config.gentle,
-  })
-  const cardProps = useSpring({
-    marginLeft: "0px",
-    opacity: 1,
-    from: { marginLeft: "-50vw", opacity: 0 },
-    duration: 2000,
-    delay: 1500,
-    config: config.gentle,
-  })
-  const sidebarProps = useSpring({
-    marginTop: "0px",
-    from: { marginTop: "100vh" },
-    config: config.slow,
-  })
 
   return (
     <Layout>
@@ -50,9 +26,8 @@ const Index = ({ data, location }) => {
             min-height: 85vh;
           `}
         >
-          <animated.div
+          <div
             className="jumbotron"
-            style={jumboProps}
             css={css`
               /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
               background: -moz-linear-gradient(
@@ -79,12 +54,12 @@ const Index = ({ data, location }) => {
               Please check out my latest blog posts on patent law, and other IP
               issues.
             </p>
-          </animated.div>
-          <animated.div style={cardProps} className="container">
+          </div>
+          <div>
             <Bio avatar={avatar} />
-          </animated.div>
+          </div>
         </div>
-        <animated.div className="sidebar col-md-5 ml-auto" style={sidebarProps}>
+        <div className="col-md-4">
           <div className="container sidebar-card">
             <h5>Legal Disclaimer</h5>
             <small>
@@ -127,7 +102,7 @@ const Index = ({ data, location }) => {
               Go to Flashcards
             </a>
           </div>
-        </animated.div>
+        </div>
       </div>
     </Layout>
   )
