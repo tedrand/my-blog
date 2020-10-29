@@ -1,5 +1,6 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { useStaticQuery, StaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import Search from "../components/search"
 
@@ -30,16 +31,26 @@ query SearchIndexQuery {
   siteSearchIndex {
     index
   }
+  icon: file(relativePath: { eq: "icon.png" }) {
+    childImageSharp {
+      fixed(width: 25) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
 }`
 
 const Topnav = () => {
+  const data = useStaticQuery(navQuery)
+  const footerImg = data?.icon?.childImageSharp?.fixed
+  
   return (
     <StaticQuery
       query={navQuery}
       render={data => (
         <div className="navbar navbar-dark navbar-expand-md topnav">
           <a className="navbar-brand" href="/">
-            T.R.
+            <Image fixed={footerImg} />
           </a>
           <button className="navbar-toggler" type="button"
             data-toggle="collapse" data-target="#navbarSupportedContent"

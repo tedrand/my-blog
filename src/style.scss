@@ -193,6 +193,10 @@ $color-dark: #1b1b1b;
   -webkit-box-shadow: 3px 3px 7px 3px $color-primary-lightest;
   box-shadow: 3px 3px 11px 3px $color-primary-lightest;
   z-index: 1;
+
+  .navbar-nav .nav-link {
+    color: #dddddd;
+  }
 }
 
 .search-nav {
