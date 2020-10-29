@@ -1,4 +1,19 @@
 /* CSS Custom Properties Definitions */
+$color-primary-darkest:  #251330;
+$color-primary-darker: #562d6e;
+$color-primary: #643480;
+$color-primary-lighter: #8043a4;
+$color-primary-lightest: #8e4bb6;
+
+$color-secondary: #348064;
+$color-secondary-lighter: #41a07d;
+$color-secondary-lightest: rgb(112, 166, 146);
+
+$color-tertiary: #806434;
+$color-tertiary-lighter: #908573;
+$color-tertiary-lightest: #b68e4b;
+
+$color-dark: #1b1b1b;
 
 :root {
   /* Kingfisher Daisy */
@@ -30,12 +45,9 @@
 }
 
 .layout {
-  background-color: var(--color-primary);
-  background-image: linear-gradient(
-    to top right,
-    var(--color-primary),
-    var(--color-secondary)
-  );
+  background-color: #643480;
+  background-color: $color-primary;
+  background-image: linear-gradient(to top right, $color-primary, $color-secondary);
   background-repeat: no-repeat;
   min-height: 95vh;
 }
@@ -46,16 +58,16 @@
 }
 
 .navbar-dark {
-  background-color: var(--color-dark);
+  background-color: $color-dark;
 }
 
 .btn-primary {
-  background-color: var(--color-primary-lighter);
-  border-color: var(--color-primary);
+  background-color: $color-primary-lighter;
+  border-color: $color-primary;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary);
+  background-color: $color-primary;
 }
 
 .paper-container {
@@ -77,7 +89,7 @@
 }
 
 .sidebar-card {
-  border-left: 6px solid var(--color-primary-lightest);
+  border-left: 6px solid $color-primary-lightest;
   padding: 30px;
   margin-bottom: 10px;
   background-color: white;
@@ -93,11 +105,11 @@
 }
 
 .icon-row a * {
-  color: var(--color-primary-lighter);
+  color: $color-primary-lighter;
 }
 
 .icon-row a *:hover {
-  color: var(--color-primary);
+  color: $color-primary;
 }
 
 .icon-row a svg {
@@ -109,7 +121,7 @@
   min-height: 200px;
   margin: 10px;
   padding: 10px;
-  border: 4px solid var(--color-secondary-lighter);
+  border: 4px solid $color-secondary-lighter;
   border-radius: 0;
 }
 
@@ -118,9 +130,9 @@
 } 
 
 .footer-nav {
-  -moz-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);
-  -webkit-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);
-  box-shadow: 3px -1px 3px 1px var(--color-secondary-lighter);
+  -moz-box-shadow: 3px -2px 3px 3px $color-primary-lightest;
+  -webkit-box-shadow: 3px -2px 3px 3px $color-primary-lightest;
+  box-shadow: 3px -1px 3px 1px $color-secondary-lighter;
   padding-top: 20px;
 }
 
@@ -151,8 +163,8 @@
 
 .flashcard .card-title {
   padding: 5px;
-  border-bottom: 1px solid var(--color-secondary-lighter);
-  color: var(--color-primary);
+  border-bottom: 1px solid $color-secondary-lighter;
+  color: $color-primary;
   text-align: center;
 }
 
@@ -177,15 +189,15 @@
 }
 
 .topnav {
-  -moz-box-shadow: 3px 3px 7px 3px var(--color-primary-lightest);
-  -webkit-box-shadow: 3px 3px 7px 3px var(--color-primary-lightest);
-  box-shadow: 3px 3px 11px 3px var(--color-primary-lightest);
+  -moz-box-shadow: 3px 3px 7px 3px $color-primary-lightest;
+  -webkit-box-shadow: 3px 3px 7px 3px $color-primary-lightest;
+  box-shadow: 3px 3px 11px 3px $color-primary-lightest;
   z-index: 1;
 }
 
 .search-nav {
-  -moz-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);
-  -webkit-box-shadow: 3px -2px 3px 3px var(--color-primary-lightest);
-  box-shadow: 3px -1px 3px 1px var(--color-secondary-lighter);
+  -moz-box-shadow: 3px -2px 3px 3px $color-primary-lightest;
+  -webkit-box-shadow: 3px -2px 3px 3px $color-primary-lightest;
+  box-shadow: 3px -1px 3px 1px $color-secondary-lighter;
   padding-top: 20px;
 }

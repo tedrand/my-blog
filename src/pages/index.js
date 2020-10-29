@@ -29,12 +29,6 @@ const Index = ({ data, location }) => {
           <div
             className="jumbotron"
             css={css`
-              /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
-              background: -moz-linear-gradient(
-                -45deg,
-                rgba(255, 255, 255, 1) 0%,
-                rgba(255, 255, 255, 0) 100%
-              ); /* FF3.6-15 */
               background: -webkit-linear-gradient(
                 -45deg,
                 rgba(255, 255, 255, 1) 0%,

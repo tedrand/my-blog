@@ -28,7 +28,7 @@ const FlashcardsCategory = ({ data, location }) => {
                 className="col"
                 key={post.fields.slug}
                 css={css`
-                  border: 2px solid var(--color-secondary-lighter);
+                  border: 2px solid #41a07d;
                   padding: 10px;
                   margin-bottom: 10px;
                   margin-right: 5px;

@@ -84,6 +84,10 @@ module.exports = {
         theme_color: `#348064`,
         display: `minimal-ui`,
         icon: `content/assets/icon.png`,
+        icon_options: {
+          // For all the options available, please see the additional resources below.
+          purpose: `any maskable`,
+        },
       },
     },
     {
@@ -119,6 +123,7 @@ module.exports = {
         environments: ["production", "development"],
       },
     },
+    `gatsby-plugin-sass`,
     // {
     //   // The name of the plugin
     //   resolve: 'gatsby-source-mongodb',

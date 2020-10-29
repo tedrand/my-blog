@@ -23,7 +23,7 @@ const BlogIndex = ({ data, location }) => {
               <div
                 className="row"
                 css={css`
-                  border: 2px solid var(--color-secondary-lighter);
+                  border: 2px solid #41a07d;
                   padding: 10px;
                   margin-bottom: 10px;
                   margin-right: 5px;
@@ -36,7 +36,7 @@ const BlogIndex = ({ data, location }) => {
                       itemProp="url"
                       css={css`
                         text-decoration: none;
-                        color: var(--color-primary);
+                        color: #643480;
                       `}
                     >
                       <span itemProp="headline">{title}</span>

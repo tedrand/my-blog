@@ -46,7 +46,7 @@ const Flashcard = ({ title, front, back }) => {
           className="card-title"
           css={css`
             padding: 10px;
-            border-bottom: 1px solid var(--color-secondary);
+            border-bottom: 1px solid #348064;
           `}
         >
           {title}

@@ -10,19 +10,20 @@ const Layout = ({ location, children }) => {
       <Topnav />
       {children}
       <CookieConsent
+        className="cookie-consent-box"
         location="none"
         buttonText="Accept"
         declineButtonText="Decline"
         style={{
-          background: "var(--color-secondary)",
-          border: "2px solid var(--color-tertiary-lightest)",
+          background: "#348064",
+          border: "2px solid #b68e4b",
           opacity: 0.9,
           zIndex: 50,
           width: "400px",
           top: "65vh",
         }}
         buttonStyle={{
-          backgroundColor: "var(--color-primary-lightest)",
+          backgroundColor: "#8e4bb6",
           color: "white",
           fontSize: "15px",
         }}
