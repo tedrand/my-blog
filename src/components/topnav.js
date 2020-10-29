@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import Search from "../components/search"
@@ -41,8 +41,7 @@ query SearchIndexQuery {
 }`
 
 const Topnav = () => {
-  const data = useStaticQuery(navQuery)
-  const footerImg = data?.icon?.childImageSharp?.fixed
+
   
   return (
     <StaticQuery
@@ -50,7 +49,7 @@ const Topnav = () => {
       render={data => (
         <div className="navbar navbar-dark navbar-expand-md topnav">
           <a className="navbar-brand" href="/">
-            <Image fixed={footerImg} />
+            <Image fixed={data?.icon?.childImageSharp?.fixed} />
           </a>
           <button className="navbar-toggler" type="button"
             data-toggle="collapse" data-target="#navbarSupportedContent"
